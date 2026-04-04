@@ -22,6 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -30,13 +31,12 @@ jobs:
         run: python3 scraper.py
 
       - name: Validate events.json
-        run: python3 -c "import json; d=json.load(open('events.json')); assert len(d['events'])>0, 'No events!'; print(f'OK: {len(d[\"events\"])} events')"
+        run: python3 -c "import json; d=json.load(open('events.json')); assert len(d['events'])>0; print(f'OK')"
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          ```yaml
           git add events.json
           git diff --cached --quiet || git commit -m "ci: update events $(date +%Y-%m-%d)"
           git push
@@ -49,4 +49,3 @@ jobs:
 
       - id: deployment
         uses: actions/deploy-pages@v4
-
