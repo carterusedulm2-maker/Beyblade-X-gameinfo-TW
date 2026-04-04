@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戰鬥陀螺比賽 台灣 2026</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--border:#334155;--text:#e2e8f0;--muted:#94a3b8;--accent:#3b82f6;--accent2:#60a5fa;--expired:#475569;--tag-bg:#1e3a5f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0 0 2rem}
+header{background:linear-gradient(135deg,#1e3a5f,#0f172a);padding:1.5rem 1rem;text-align:center;border-bottom:2px solid var(--accent)}
+header h1{font-size:1.5rem;margin-bottom:.3rem}
+header p{color:var(--muted);font-size:.85rem}
+.controls{max-width:900px;margin:1rem auto;padding:0 1rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.controls select,.controls button{font-size:.85rem;padding:.4rem .6rem;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer}
+.controls>label{font-size:.75rem;color:var(--muted);margin-bottom:-0.3rem}
+.controls label:has(input){font-size:.8rem;display:flex;align-items:center;gap:.3rem;color:var(--muted)}
+.controls select:focus{outline:2px solid var(--accent)}
+.controls button{background:var(--accent);border-color:var(--accent);font-weight:600}
+.controls button:hover{background:var(--accent2)}
+.controls label{border:none;display:flex;align-items:center;gap:.3rem;font-size:.8rem;color:var(--muted)}
+.stats{max-width:900px;margin:.5rem auto;padding:0 1rem;font-size:.8rem;color:var(--muted)}
+.list{max-width:900px;margin:0 auto;padding:0 1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:.7rem;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.card.expired{opacity:.45;background:#1a1f2e;border-left:3px solid #ef4444}
+.card.expired .store-name::after{content:" (已結束)";font-size:.75rem;color:#ef4444;font-weight:400}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.5rem}
+.store-name{font-size:1.05rem;font-weight:700;color:var(--accent2)}
+.tags{display:flex;gap:.3rem;flex-wrap:wrap}
+.tag{font-size:.7rem;padding:.15rem .4rem;border-radius:4px;background:var(--tag-bg);color:var(--accent2);white-space:nowrap}
+.tag.open{background:#1a3a2a;color:#4ade80}
+.tag.normal{background:#3a2a1a;color:#fbbf24}
+.card-body{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem;font-size:.85rem}
+.card-body dt{color:var(--muted)}
+.card-body dd{color:var(--text)}
+@media(max-width:600px){
+  .card-body{grid-template-columns:1fr}
+  .controls{flex-direction:column;align-items:stretch}
+  header h1{font-size:1.2rem}
+}
+.no-data{text-align:center;color:var(--muted);padding:3rem 1rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏆 戰鬥陀螺比賽 台灣 2026</h1>
+  <p>資料來源：戰鬥陀螺 TW 官方 Google Sheets ｜ 自動更新</p>
+</header>
+
+<div class="controls" id="controls">
+  <label for="filterCity">縣市</label><select id="filterCity"><option value="">全部縣市</option></select>
+  <label for="filterReg">報名</label><select id="filterReg"><option value="">全部報名方式</option></select>
+  <label for="filterCat">賽制</label><select id="filterCat"><option value="">全部賽制</option></select>
+  <label for="sortBy">排序</label><select id="sortBy">
+    <option value="date-desc">日期 新→舊</option>
+    <option value="date-asc">日期 舊→新</option>
+    <option value="cap-desc">名額 多→少</option>
+    <option value="cap-asc">名額 少→多</option>
+  </select>
+  <label><input type="checkbox" id="hideExpired"> 隱藏已結束</label>
+  <button onclick="resetFilters()">重置</button>
+</div>
+<div class="stats" id="stats"></div>
+<div class="list" id="list"></div>
+
+<script>
+let DATA=null;
+const today=new Date().toISOString().slice(0,10);
+
+async function init(){
+  try{
+    const r=await fetch('events.json');
+    DATA=await r.json();
+    buildFilters();
+    render();
+    document.getElementById('stats').textContent=
+      `最後更新：${DATA.lastUpdated} ｜ 共 ${DATA.events.length} 場比賽`;
+  }catch(e){
+    document.getElementById('list').innerHTML='<div class="no-data">無法載入資料</div>';
+  }
+}
+
+function buildFilters(){
+  const cities=[...new Set(DATA.events.map(e=>e.city).filter(Boolean))].sort();
+  const regs=[...new Set(DATA.events.map(e=>e.registrationMethod).filter(Boolean))].sort();
+  const cats=[...new Set(DATA.events.map(e=>e.category).filter(Boolean))].sort();
+  fillSelect('filterCity',cities);
+  fillSelect('filterReg',regs);
+  fillSelect('filterCat',cats);
+  ['filterCity','filterReg','filterCat','sortBy'].forEach(id=>
+    document.getElementById(id).addEventListener('change',render));
+  document.getElementById('hideExpired').addEventListener('change',render);
+}
+
+function fillSelect(id,opts){
+  const sel=document.getElementById(id);
+  opts.forEach(o=>{const op=document.createElement('option');op.value=o;op.textContent=o;sel.appendChild(op)});
+}
+
+function render(){
+  const city=document.getElementById('filterCity').value;
+  const reg=document.getElementById('filterReg').value;
+  const cat=document.getElementById('filterCat').value;
+  const sort=document.getElementById('sortBy').value;
+  const hideExp=document.getElementById('hideExpired').checked;
+
+  let events=DATA.events.filter(e=>{
+    if(city&&e.city!==city)return false;
+    if(reg&&e.registrationMethod!==reg)return false;
+    if(cat&&e.category!==cat)return false;
+    if(hideExp&&e.date<today)return false;
+    return true;
+  });
+
+  const [field,dir]=sort.split('-');
+  events.sort((a,b)=>{
+    let va,vb;
+    if(field==='date'){va=a.date;vb=b.date}
+    else{va=a.capacity;vb=b.capacity}
+    if(va<vb)return dir==='asc'?-1:1;
+    if(va>vb)return dir==='asc'?1:-1;
+    return 0;
+  });
+
+  const list=document.getElementById('list');
+  if(!events.length){list.innerHTML='<div class="no-data">沒有符合條件的比賽</div>';return}
+
+  list.innerHTML=events.map(e=>{
+    const expired=e.date<today;
+    const catClass=(e.category||'').includes('公開')?'open':'normal';
+    return `<div class="card${expired?' expired':''}">
+      <div class="card-header">
+        <span class="store-name">${esc(e.storeName)}</span>
+        <div class="tags">
+          <span class="tag ${catClass}">${esc(e.category)}</span>
+          <span class="tag">${esc(e.source)}</span>
+        </div>
+      </div>
+      <dl class="card-body">
+        <dt>📅 日期</dt><dd>${esc(e.date)} ${esc(e.time)}</dd>
+        <dt>📍 地點</dt><dd>${esc(e.address)}</dd>
+        <dt>📝 報名</dt><dd>${esc(e.registrationMethod)}</dd>
+        <dt>👥 名額</dt><dd>${e.capacity||'未公布'} 人</dd>
+        <dt>📞 電話</dt><dd>${esc(e.phone)}</dd>
+        ${e.notes?`<dt>📌 備註</dt><dd>${esc(e.notes)}</dd>`:''}
+      </dl>
+    </div>`}).join('');
+
+  document.getElementById('stats').textContent=
+    `最後更新：${DATA.lastUpdated} ｜ 顯示 ${events.length} / ${DATA.events.length} 場比賽`;
+}
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function resetFilters(){
+  ['filterCity','filterReg','filterCat'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('sortBy').value='date-desc';
+  document.getElementById('hideExpired').checked=false;
+  render();
+}
+
+init();
+</script>
+</body>
+</html>
