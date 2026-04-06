@@ -30,7 +30,7 @@ header p{color:var(--muted);font-size:.85rem}
 .grid{max-width:1100px;margin:0 auto;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:.8rem}
 
 /* blade card */
-.blade-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;transition:border-color .2s;cursor:pointer}
+.blade-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;transition:border-color .2s}
 .blade-card:hover{border-color:var(--accent2)}
 .blade-card.expanded{border-color:var(--accent);grid-column:1/-1}
 .blade-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.5rem}
@@ -48,8 +48,8 @@ header p{color:var(--muted);font-size:.85rem}
 .tag-tier-b{background:#2a2a2a;color:#94a3b8}
 .tag-burst{background:#2a1a2a;color:var(--pink)}
 
-/* expanded detail */
-.blade-detail{display:none;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+/* expanded detail - always visible */
+.blade-detail{display:block;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
 .blade-card.expanded .blade-detail{display:block}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem;font-size:.85rem;margin-bottom:.8rem}
 .detail-grid dt{color:var(--muted)}
@@ -125,7 +125,7 @@ tr:last-child td{border-bottom:none}
     <label><input type="checkbox" id="filterBalance"> 平衡型</label>
     <span id="bladeCount" style="font-size:.75rem;color:var(--muted);margin-left:auto"></span>
   </div>
-  <div class="stats-bar">提示：點擊卡片展開詳細分析</div>
+  <div class="stats-bar">全部 ${BLADES.length} 個 Blade 詳細分析</div>
   <div class="grid" id="bladeGrid"></div>
 </div>
 
@@ -275,7 +275,7 @@ const BLADES = [
     gameplan:"低徑+侵略性 Bit：必須快速結束比賽"
   },
   {
-    name:"Hells Scythe",weight:"?",type:"stamina",
+    name:"Hells Scythe",weight:"32.7-32.9g",type:"stamina",
     tier:"S+",burst:null,
     strengths:["頂級耐力+攻擊 combo","可用於防禦 combo","高耐力-攻擊 combo 人氣超高"],
     weaknesses:["發射技術要求高"],
@@ -288,7 +288,7 @@ const BLADES = [
     gameplan:"依賴技術，建議有一定經驗再使用"
   },
   {
-    name:"Hells Chain",weight:"?",type:"defense",
+    name:"Hells Chain",weight:"33.2-33.9g",type:"defense",
     tier:"A",burst:null,
     strengths:["防禦+耐力混合最佳","重量級","KO 抵抗力強"],
     weaknesses:["比 Hells Scythe 稍遜"],
@@ -311,7 +311,7 @@ const BLADES = [
     gameplan:"快速進攻，壓制對手"
   },
   {
-    name:"Golem Rock",weight:"?",type:"defense",
+    name:"Golem Rock",weight:"34.0-34.4g",type:"defense",
     tier:"A",burst:null,
     strengths:["超高防禦","耐力也不差","特殊賽制好用"],
     weaknesses:["重量導致靈活性較低"],
@@ -322,7 +322,7 @@ const BLADES = [
     gameplan:"硬吃撞擊，持久取勝"
   },
   {
-    name:"Cobalt Drake",weight:"?",type:"attack",
+    name:"Cobalt Drake",weight:"36.8-37.4g",type:"attack",
     tier:"A",burst:null,
     strengths:["重量級","上攻擊能力"],
     weaknesses:["需要強 launch"],
@@ -333,7 +333,7 @@ const BLADES = [
     gameplan:"強 launch + 上攻擊"
   },
   {
-    name:"Draciel S",weight:"?",type:"defense",
+    name:"Draciel S",weight:"28.0-28.2g",type:"defense",
     tier:"A",burst:null,
     strengths:["經典型防禦 blade","穩定性高"],
     weaknesses:["攻擊力不足"],
@@ -342,6 +342,278 @@ const BLADES = [
     },
     note:"經典系列，防禦型入門",
     gameplan:"持久戰"
+  },
+  {
+    name:"Knight Lance",weight:"32.7-32.9g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["三邊錐形設計","兼具上攻+撞擊攻擊","可偏轉對手"],
+    weaknesses:["攻擊力不如頂級","後期耐力不足"],
+    combos:{attack:"Knight Lance 5-60/9-60 + Rush/Taper"},
+    note:"三邊錐形攻擊手",gameplan:"快速進攻"
+  },
+  {
+    name:"Shark Edge",weight:"34.0-35.0g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["強力上攻+撞擊","兩面斜坡鰭設計"],
+    weaknesses:["耐力偏低","命中不穩定"],
+    combos:{attack:"Shark Edge 5-60/9-60 + Rush/Flat"},
+    note:"核彈級攻擊手，一擊決勝",gameplan:"強發射+快速 KO"
+  },
+  {
+    name:"Leon Claw",weight:"30.9-31.2g",type:"defense",
+    tier:"B",burst:null,
+    strengths:["五邊爪形設計","傾斜時可攻擊"],
+    weaknesses:["形狀奇特不穩定","攻防都不頂尖"],
+    combos:{defense:"Leon Claw 5-60 + Ball/Orb"},
+    note:"獨特傾斜爪機制",gameplan:"防禦設定為主"
+  },
+  {
+    name:"Viper Tail",weight:"34.6-34.9g",type:"attack",
+    tier:"A",burst:"高 Burst 風險",
+    strengths:["三邊三角攻擊","破穩能力極強"],
+    weaknesses:["Recoil Release 問題嚴重","防禦/耐力 combo 不行"],
+    combos:{attack:"Viper Tail 5-60/9-60 + Rush/Taper"},
+    note:"純攻擊，破穩專家",gameplan:"強力 KO"
+  },
+  {
+    name:"Phoenix Feather",weight:"31.0-33.4g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["三邊粗糙邊緣","上攻+撞擊兼具"],
+    weaknesses:["重量浮動大","穩定性一般"],
+    combos:{attack:"Phoenix Feather 5-60/9-60 + Rush/Flat"},
+    note:"三邊攻擊手",gameplan:"侵略性打法"
+  },
+  {
+    name:"Wyvern Gale",weight:"31.9-32.2g",type:"balance",
+    tier:"B",burst:null,
+    strengths:["四邊光滑銳利","可破穩對手"],
+    weaknesses:["有縫隙影響表現","重量偏輕"],
+    combos:{attack:"Wyvern Gale 5-60 + Taper/Point"},
+    note:"四邊平衡型",gameplan:"破穩取勝"
+  },
+  {
+    name:"Dran Dagger",weight:"34.9-35.7g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["六面攻擊","連擊型打法","Dran Sword 變體"],
+    weaknesses:["單次撞擊力不強"],
+    combos:{attack:"Dran Dagger 5-60/9-60 + Rush/Taper"},
+    note:"六面連擊攻擊手",gameplan:"密集攻擊"
+  },
+  {
+    name:"Rhino Horn",weight:"29.9-33.0g",type:"attack",
+    tier:"B",burst:null,
+    strengths:["四點集中攻擊","開局爆發力強"],
+    weaknesses:["耐力極差，必須速戰","重量浮動極大"],
+    combos:{attack:"Rhino Horn 5-60/9-60 + Rush/Flat"},
+    note:"玻璃大砲，開局 KO 型",gameplan:"必須在前幾秒 KO"
+  },
+  {
+    name:"Unicorn Sting",weight:"32.8-33.0g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["兩面不對稱設計","強撞擊力"],
+    weaknesses:["穩定性不足"],
+    combos:{attack:"Unicorn Sting 5-60/9-60 + Rush/Taper"},
+    note:"不對稱攻擊手",gameplan:"強撞擊"
+  },
+  {
+    name:"Sphinx Cowl",weight:"32.6-33.1g",type:"defense",
+    tier:"A",burst:null,
+    strengths:["九邊鋸齒設計","多角度偏轉防禦"],
+    weaknesses:["爆發不穩定"],
+    combos:{defense:"Sphinx Cowl 5-60/9-60 + Ball/Hexa"},
+    note:"九邊防禦陣列型",gameplan:"偏轉消耗對手"
+  },
+  {
+    name:"Dran Sword",weight:"34.5-35.3g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["三邊銳利設計","經典攻擊手"],
+    weaknesses:["被新 blade 超越"],
+    combos:{attack:"Dran Sword 5-60/9-60 + Rush/Taper"},
+    note:"初代攻擊手，經典之作",gameplan:"標準攻擊"
+  },
+  {
+    name:"Shinobi Shadow",weight:"27.9-28.2g",type:"defense",
+    tier:"B",burst:null,
+    strengths:["光滑形狀可偏轉"],
+    weaknesses:["極輕，防禦力被抵消"],
+    combos:{defense:"Shinobi Shadow 5-60 + Orb"},
+    note:"忍者型偏轉防禦，但太輕",gameplan:"偏轉防禦"
+  },
+  {
+    name:"Weiss Tiger",weight:"34.5-34.7g",type:"balance",
+    tier:"A",burst:null,
+    strengths:["四邊平衡","穩定性佳"],
+    weaknesses:["無突出特性"],
+    combos:{attack:"Weiss Tiger 5-60/9-60 + Taper/Point"},
+    note:"平衡全能型",gameplan:"靈活應變"
+  },
+  {
+    name:"Black Shell",weight:"32.2-33.2g",type:"defense",
+    tier:"A",burst:null,
+    strengths:["八邊龜頭設計","低高度迴避攻擊"],
+    weaknesses:["攻擊力不足"],
+    combos:{defense:"Black Shell 5-60 + Ball/Hexa"},
+    note:"龜殼防禦，低高度迴避專家",gameplan:"低高度防禦"
+  },
+  {
+    name:"Phoenix Rudder",weight:"34.4-34.8g",type:"stamina",
+    tier:"A",burst:null,
+    strengths:["六邊反錐形","Glide bit 搭配站立消耗"],
+    weaknesses:["耐力戰掙扎"],
+    combos:{stamina:"Phoenix Rudder 5-60 + Glide"},
+    note:"反錐形站立型耐力手",gameplan:"站立消耗對手"
+  },
+  {
+    name:"Leon Crest",weight:"34.7-35.2g",type:"defense",
+    tier:"A",burst:null,
+    strengths:["七邊垂直突起","牆壁般防禦"],
+    weaknesses:["耐力不如 Wizard Rod"],
+    combos:{defense:"Leon Crest 5-60/9-60 + Hexa/Ball"},
+    note:"牆壁防禦型",gameplan:"硬吃撞擊"
+  },
+  {
+    name:"Whale Wave",weight:"38.0-38.3g",type:"defense",
+    tier:"S",burst:null,
+    strengths:["超重防禦","四邊波浪設計"],
+    weaknesses:["靈活性低"],
+    combos:{defense:"Whale Wave 5-60/9-60 + Ball/Hexa"},
+    note:"最重防禦 blade 之一",gameplan:"重量壓制"
+  },
+  {
+    name:"Lightning L-Drago Rapid Hit",weight:"32.5-33.4g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["左旋反轉","連續撞擊"],
+    weaknesses:["需要強 launch","需要適應左旋"],
+    combos:{attack:"L-Drago RH 5-60/9-60 + Rush/Taper"},
+    note:"左旋連擊型攻擊手",gameplan:"強力左旋發射"
+  },
+  {
+    name:"Lightning L-Drago Upper",weight:"33.0-34.0g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["左旋反轉","上攻擊能力"],
+    weaknesses:["需要極強 launch"],
+    combos:{attack:"L-Drago Upper 5-60/9-60 + Rush/Flat"},
+    note:"左旋上攻擊型",gameplan:"強力左旋 + 上攻擊"
+  },
+  {
+    name:"Bear Scratch",weight:"29.6-29.9g",type:"attack",
+    tier:"B",burst:null,
+    strengths:["四點尖銳攻擊","開局爆發"],
+    weaknesses:["極輕無耐力","必須速戰"],
+    combos:{attack:"Bear Scratch 5-60 + Rush/Flat"},
+    note:"熊爪開局爆發型",gameplan:"前幾秒 KO"
+  },
+  {
+    name:"Mammoth Tusk",weight:"31.9-32.2g",type:"defense",
+    tier:"B",burst:null,
+    strengths:["四邊象牙突起"],
+    weaknesses:["防禦力不頂尖"],
+    combos:{defense:"Mammoth Tusk 5-60 + Ball/Orb"},
+    note:"象牙防禦型",gameplan:"標準防禦"
+  },
+  {
+    name:"Shinobi Knife",weight:"30.6-30.8g",type:"attack",
+    tier:"B",burst:null,
+    strengths:["三邊刀刃設計"],
+    weaknesses:["偏輕","穩定性不足"],
+    combos:{attack:"Shinobi Knife 5-60 + Taper/Rush"},
+    note:"忍者刀攻擊型",gameplan:"快速切入"
+  },
+  {
+    name:"Ptera Swing",weight:"34.2-34.5g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["三邊三角光滑","Viper Tail 變體但更光滑"],
+    weaknesses:["有縫隙"],
+    combos:{attack:"Ptera Swing 5-60/9-60 + Rush/Taper"},
+    note:"Viper Tail 的改良版",gameplan:"強力攻擊"
+  },
+  {
+    name:"Knight Mail",weight:"36.4-36.9g",type:"defense",
+    tier:"S",burst:null,
+    strengths:["圓形緊湊","3 顆移動金屬球","偏轉+攻擊兼具"],
+    weaknesses:["新零件，資料較少"],
+    combos:{defense:"Knight Mail 5-60/9-60 + Hexa/Ball"},
+    note:"移動金屬球機制，攻防一體",gameplan:"偏轉防禦+反擊"
+  },
+  {
+    name:"Samurai Saber",weight:"36.2-36.5g",type:"attack",
+    tier:"S",burst:null,
+    strengths:["雙模式切換","連擊→一擊必殺","重量級"],
+    weaknesses:["需要技術掌握模式切換"],
+    combos:{attack:"Samurai Saber 5-60/9-60 + Rush/Taper"},
+    note:"雙模式攻擊手，金屬翼展開/收回",gameplan:"開局連擊，後期必殺"
+  },
+  {
+    name:"Impact Drake",weight:"38.5-39.2g",type:"attack",
+    tier:"S",burst:null,
+    strengths:["最重攻擊 blade","橡膠接觸點","毀滅性撞擊"],
+    weaknesses:["耐力極差","高反作用力"],
+    combos:{attack:"Impact Drake 1-60/5-60 + Taper/Rush"},
+    note:"最重攻擊手，純暴力 KO",gameplan:"一擊 KO，速戰速決"
+  },
+  {
+    name:"Ghost Circle",weight:"26.5-26.7g",type:"stamina",
+    tier:"B",burst:null,
+    strengths:["完美圓形","低阻力"],
+    weaknesses:["極輕","攻擊力幾乎為零"],
+    combos:{stamina:"Ghost Circle 5-60/9-60 + Ball/Needle"},
+    note:"圓形耐力型，純轉圈",gameplan:"純耐力取勝"
+  },
+  {
+    name:"Shelter Drake",weight:"32.2-32.5g",type:"defense",
+    tier:"A",burst:null,
+    strengths:["四邊護盾設計"],
+    weaknesses:["被新 blade 超越"],
+    combos:{defense:"Shelter Drake 5-60 + Orb/Ball"},
+    note:"護盾防禦型",gameplan:"標準防禦"
+  },
+  {
+    name:"Crimson Garuda",weight:"34.7-35.2g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["三邊翼形","攻擊力佳"],
+    weaknesses:["穩定性一般"],
+    combos:{attack:"Crimson Garuda 5-60/9-60 + Rush/Taper"},
+    note:"翼形攻擊手",gameplan:"侵略性打法"
+  },
+  {
+    name:"Croc Crunch",weight:"32.6-33.0g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["Shark Edge 變體","上攻+撞擊"],
+    weaknesses:["比 Shark Edge 稍弱"],
+    combos:{attack:"Croc Crunch 5-60/9-60 + Rush/Taper"},
+    note:"鱷魚咬型，Shark Edge 變體",gameplan:"強力 KO"
+  },
+  {
+    name:"Xeno Xcalibur",weight:"30.8-31.0g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["銳利橢圓形","大接觸點"],
+    weaknesses:["玻璃大砲","耐力低"],
+    combos:{attack:"Xeno Xcalibur 5-60/1-60 + Rush/Taper"},
+    note:"銳利橢圓攻擊手，一擊決勝",gameplan:"強發射 KO"
+  },
+  {
+    name:"Hells Hammer",weight:"32.8-33.2g",type:"attack",
+    tier:"A",burst:null,
+    strengths:["兩面錘形設計"],
+    weaknesses:["攻擊力不如頂級"],
+    combos:{attack:"Hells Hammer 5-60/9-60 + Rush/Taper"},
+    note:"錘形攻擊手",gameplan:"撞擊攻擊"
+  },
+  {
+    name:"Dranzer S",weight:"27.2-27.5g",type:"attack",
+    tier:"B",burst:null,
+    strengths:["經典系列","螺旋設計"],
+    weaknesses:["極輕","性能不如現代 blade"],
+    combos:{attack:"Dranzer S 5-60 + Rush/Taper"},
+    note:"經典紀念 blade",gameplan:"收藏/入門"
+  },
+  {
+    name:"Driger S",weight:"28.2-28.5g",type:"attack",
+    tier:"B",burst:null,
+    strengths:["經典系列"],
+    weaknesses:["極輕"],
+    combos:{attack:"Driger S 5-60 + Rush/Taper"},
+    note:"經典紀念 blade",gameplan:"收藏/入門"
   }
 ];
 
@@ -437,7 +709,7 @@ function renderBlades(filter="",fAttack,fDefense,fStamina,fBalance){
   });
   document.getElementById("bladeCount").textContent=`共 ${filtered.length} 個 blades`;
   grid.innerHTML=filtered.map(b=>`
-    <div class="blade-card" onclick="toggleCard(this)">
+    <div class="blade-card">
       <div class="blade-header">
         <div>
           <span class="blade-name">${b.name}</span>
@@ -464,11 +736,11 @@ function renderBlades(filter="",fAttack,fDefense,fStamina,fBalance){
           ${Object.entries(b.combos).map(([type,combo])=>`
             <div class="combo-row">
               <span class="tag" style="background:var(--card2)">${typeLabel[type]||type}</span>
-              <span class="combo-part blade-part">${combo.split("+")[0].trim()}</span>
+              <span class="combo-part blade-part">${(combo.split("+")[0]||"").trim()}</span>
               <span style="color:var(--muted)">+</span>
-              <span class="combo-part rach">${combo.split("+")[1].trim()}</span>
+              <span class="combo-part rach">${(combo.split("+")[1]||"").trim()}</span>
               <span style="color:var(--muted)">+</span>
-              <span class="combo-part bit">${combo.split("+")[2]?combo.split("+")[2].trim():"—"}</span>
+              <span class="combo-part bit">${(combo.split("+")[2]||"").trim()||"—"}</span>
             </div>`).join("")}
         </div>
       </div>
@@ -503,7 +775,7 @@ function renderCombos(filter="",fAttack,fDefense,fStamina){
       (fAttack&&c.type==="attack")||(fDefense&&c.type==="defense")||(fStamina&&c.type==="stamina");
     return matchName&&matchType;
   });
-  grid.innerHTML=filtered.map(c=>`<div class="blade-card" style="cursor:default">
+  grid.innerHTML=filtered.map(c=>`<div class="blade-card">
     <div class="blade-header">
       <div><span class="blade-name">${c.name}</span></div>
       <span class="blade-type type-${c.type==='attack'?'attack':c.type==='defense'?'defense':'stamina'}">${typeLabel[c.type]}</span>
@@ -521,6 +793,7 @@ function renderCombos(filter="",fAttack,fDefense,fStamina){
 
 // ─── INTERACTIONS ────────────────────────────────────────────────
 function toggleCard(el){el.classList.toggle("expanded")}
+// All details are always visible by default, toggle is kept for future use
 
 document.querySelectorAll(".tab-btn").forEach(btn=>{
   btn.addEventListener("click",()=>{
@@ -571,10 +844,11 @@ document.getElementById("searchCombo").addEventListener("input",e=>{
 function closeOverlay(){document.getElementById("overlay").classList.remove("open");}
 
 // ─── INIT ────────────────────────────────────────────────────────
-renderBlades();
-renderRatchets();
-renderBits();
-renderCombos();
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",()=>{renderBlades();renderRatchets();renderBits();renderCombos();});
+}else{
+  renderBlades();renderRatchets();renderBits();renderCombos();
+}
 </script>
 </body>
 </html>
