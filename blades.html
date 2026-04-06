@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blade & Combo 分析 ｜ 戰鬥陀螺 X 零件圖鑑</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--card2:#253748;--border:#334155;--text:#e2e8f0;--muted:#94a3b8;--accent:#3b82f6;--accent2:#60a5fa;--green:#4ade80;--red:#f87171;--yellow:#fbbf24;--purple:#a78bfa;--pink:#f472b6;--teal:#2dd4bf}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0 0 3rem}
+header{background:linear-gradient(135deg,#1e3a5f,#0f172a);padding:1.5rem 1rem 1.2rem;text-align:center;border-bottom:2px solid var(--accent)}
+header h1{font-size:1.5rem;margin-bottom:.3rem}
+header p{color:var(--muted);font-size:.85rem}
+
+/* nav tabs */
+.tabs{max-width:1100px;margin:1rem auto;padding:0 1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.tab-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:.4rem .8rem;border-radius:8px;font-size:.8rem;cursor:pointer;transition:all .2s}
+.tab-btn:hover{border-color:var(--accent);color:var(--text)}
+.tab-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+
+/* filters */
+.controls{max-width:1100px;margin:0 auto;padding:.8rem 1rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;background:var(--card);border-radius:10px;border:1px solid var(--border);margin-bottom:.8rem}
+.controls select,.controls input{font-size:.82rem;padding:.35rem .6rem;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:var(--text)}
+.controls label{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:.3rem}
+.search-box{flex:1;min-width:180px}
+.search-box input{width:100%}
+.stats-bar{max-width:1100px;margin:.3rem auto;padding:0 1rem;font-size:.78rem;color:var(--muted)}
+
+/* blade grid */
+.grid{max-width:1100px;margin:0 auto;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:.8rem}
+
+/* blade card */
+.blade-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;transition:border-color .2s;cursor:pointer}
+.blade-card:hover{border-color:var(--accent2)}
+.blade-card.expanded{border-color:var(--accent);grid-column:1/-1}
+.blade-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.5rem}
+.blade-name{font-size:1.1rem;font-weight:700;color:var(--accent2)}
+.blade-weight{font-size:.75rem;color:var(--muted);white-space:nowrap;background:var(--bg);padding:.1rem .4rem;border-radius:4px;border:1px solid var(--border)}
+.blade-type{display:inline-block;font-size:.68rem;padding:.1rem .4rem;border-radius:4px;font-weight:600}
+.type-attack{background:#3a1a1a;color:var(--red)}
+.type-defense{background:#1a3a2a;color:var(--green)}
+.type-stamina{background:#1a2a3a;color:#60a5fa}
+.type-balance{background:#2a1a3a;color:var(--purple)}
+.blade-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.4rem}
+.tag{font-size:.68rem;padding:.15rem .4rem;border-radius:4px;background:var(--tag-bg,var(--card2));color:var(--muted)}
+.tag-tier-s{background:#3a2a1a;color:var(--yellow)}
+.tag-tier-a{background:#1a2a3a;color:#60a5fa}
+.tag-tier-b{background:#2a2a2a;color:#94a3b8}
+.tag-burst{background:#2a1a2a;color:var(--pink)}
+
+/* expanded detail */
+.blade-detail{display:none;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+.blade-card.expanded .blade-detail{display:block}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem;font-size:.85rem;margin-bottom:.8rem}
+.detail-grid dt{color:var(--muted)}
+.detail-grid dd{color:var(--text)}
+.combos-section{margin-top:.8rem}
+.combos-title{font-size:.85rem;font-weight:600;color:var(--accent2);margin-bottom:.4rem}
+.combo-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.5rem;padding:.5rem;background:var(--bg);border-radius:6px;border:1px solid var(--border)}
+.combo-part{font-size:.78rem;padding:.2rem .5rem;border-radius:4px;background:var(--card2);color:var(--text)}
+.combo-part.blade-part{color:var(--accent2);font-weight:600}
+.combo-part.rach{color:var(--green)}
+.combo-part.bit{color:var(--yellow)}
+.combo-note{font-size:.72rem;color:var(--muted);width:100%;margin-top:.2rem}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;font-size:.8rem;margin-top:.6rem}
+.pros{background:#1a2a1a;padding:.5rem;border-radius:6px;border:1px solid #2a4a2a}
+.cons{background:#2a1a1a;padding:.5rem;border-radius:6px;border:1px solid #4a2a2a}
+.pros-title{color:var(--green);font-weight:600;margin-bottom:.3rem;font-size:.75rem}
+.cons-title{color:var(--red);font-weight:600;margin-bottom:.3rem;font-size:.75rem}
+.pros li,.cons li{margin-left:.8rem}
+
+/* bit/ratchet panels */
+.panel{display:none}
+.panel.active{display:block}
+
+/* table */
+.data-table{max-width:1100px;margin:0 auto;padding:0 1rem}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{background:var(--card);color:var(--accent2);padding:.6rem .8rem;text-align:left;font-weight:600;border-bottom:2px solid var(--border)}
+td{padding:.5rem .8rem;border-bottom:1px solid var(--border);color:var(--text)}
+tr:hover td{background:var(--card)}
+tr:last-child td{border-bottom:none}
+
+/* overlay */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:none;align-items:center;justify-content:center;padding:1rem}
+.overlay.open{display:flex}
+.overlay-card{background:var(--card);border:1px solid var(--accent);border-radius:14px;padding:1.5rem;max-width:700px;width:100%;max-height:85vh;overflow-y:auto}
+.overlay-close{background:var(--accent);border:none;color:#fff;padding:.4rem .8rem;border-radius:6px;cursor:pointer;float:right;margin-bottom:.5rem}
+.overlay-close:hover{background:var(--accent2)}
+
+.no-data{text-align:center;color:var(--muted);padding:3rem 1rem}
+
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .detail-grid{grid-template-columns:1fr}
+  .pros-cons{grid-template-columns:1fr}
+  .overlay-card{max-height:90vh}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚔️ Beyblade X 零件 & Combo 分析</h1>
+  <p>資料來源：beybxdb.com ｜ 數據截至 2026-03</p>
+  <p style="margin-top:.5rem"><a href="index.html" style="color:var(--accent2)">🏆 比賽資訊</a></p>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="blades">🔩 Blade 分析</button>
+  <button class="tab-btn" data-tab="ratchets">⚙️ Ratchet 列表</button>
+  <button class="tab-btn" data-tab="bits">🎯 Bit 列表</button>
+  <button class="tab-btn" data-tab="combos">🏆 Combo 推薦</button>
+</nav>
+
+<!-- BLADES PANEL -->
+<div class="panel active" id="panel-blades">
+  <div class="controls">
+    <div class="search-box">
+      <label for="searchBlade">🔍 搜尋</label>
+      <input type="text" id="searchBlade" placeholder="輸入 Blade 名稱...">
+    </div>
+    <label><input type="checkbox" id="filterAttack"> 攻擊型</label>
+    <label><input type="checkbox" id="filterDefense"> 防禦型</label>
+    <label><input type="checkbox" id="filterStamina"> 耐力型</label>
+    <label><input type="checkbox" id="filterBalance"> 平衡型</label>
+    <span id="bladeCount" style="font-size:.75rem;color:var(--muted);margin-left:auto"></span>
+  </div>
+  <div class="stats-bar">提示：點擊卡片展開詳細分析</div>
+  <div class="grid" id="bladeGrid"></div>
+</div>
+
+<!-- RATCHETS PANEL -->
+<div class="panel" id="panel-ratchets">
+  <div class="controls">
+    <div class="search-box">
+      <label for="searchRach">🔍 搜尋</label>
+      <input type="text" id="searchRach" placeholder="輸入編號，如 3-60...">
+    </div>
+  </div>
+  <div class="data-table">
+    <table>
+      <thead><tr><th>編號</th><th>邊數</th><th>高度</th><th>重量</th><th>類型</th><th>特性</th></tr></thead>
+      <tbody id="rachTable"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- BITS PANEL -->
+<div class="panel" id="panel-bits">
+  <div class="controls">
+    <div class="search-box">
+      <label for="searchBit">🔍 搜尋</label>
+      <input type="text" id="searchBit" placeholder="輸入 Bit 名稱...">
+    </div>
+  </div>
+  <div class="data-table">
+    <table>
+      <thead><tr><th>Bit 名</th><th>縮寫</th><th>重量</th><th>Burst 抵抗</th><th>類型</th><th>特性</th></tr></thead>
+      <tbody id="bitTable"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- COMBOS PANEL -->
+<div class="panel" id="panel-combos">
+  <div class="controls">
+    <div class="search-box">
+      <label for="searchCombo">🔍 搜尋</label>
+      <input type="text" id="searchCombo" placeholder="輸入 combo 關鍵字...">
+    </div>
+    <label><input type="checkbox" id="filterComboAttack"> 攻擊型</label>
+    <label><input type="checkbox" id="filterComboDefense"> 防禦型</label>
+    <label><input type="checkbox" id="filterComboStamina"> 耐力型</label>
+  </div>
+  <div class="grid" id="comboGrid"></div>
+</div>
+
+<!-- OVERLAY for full detail -->
+<div class="overlay" id="overlay">
+  <div class="overlay-card">
+    <button class="overlay-close" onclick="closeOverlay()">✕ 關閉</button>
+    <div id="overlayContent"></div>
+  </div>
+</div>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────
+const BLADES = [
+  {
+    name:"Wizard Rod",weight:"35.2-35.8g",type:"stamina",
+    tier:"S+",burst:null,
+    strengths:["極重耐力 blade","頂級續航力","良好防禦表現","重量可減少 Burst 風險"],
+    weaknesses:["有間隙，些微 Burst 風險"],
+    combos:{
+      attack:"Wizard Rod 5-60/9-60/1-60 + Taper/Rush/Low Rush",
+      stamina:"Wizard Rod 5-60/9-60/7-60 + Ball/Orb/Disc Ball",
+      defense:"Wizard Rod 5-70 Hexa / 5-60/7-60 + High Needle/Defense"
+    },
+    note:"2026年 metas 的黃金標準，必須要有的 blade",
+    gameplan:"耐力/防禦：傾斜硬發射；攻擊：平射"
+  },
+  {
+    name:"Phoenix Wing",weight:"37.9-39.1g",type:"attack",
+    tier:"S+",burst:"有間隙，9-60 或 5-60 推薦",
+    strengths:["最重攻擊 blade 之一","硬 Smash Attack","容易使用","耐力/防禦也不差"],
+    weaknesses:["顶部重，比賽後期容易傾倒","有間隙，易 Burst"],
+    combos:{
+      attack:"Phoenix Wing 9-60/5-60/7-60 + Rush/Flat",
+      balance:"Phoenix Wing 9-60/5-60/7-60/7-70/5-70/3-70 + Taper/Point/Hexa"
+    },
+    note:"新手最推薦的攻擊手，CP值最高",
+    gameplan:"低徑攻擊 combo 最佳，70高度適合攻擊向下打擊"
+  },
+  {
+    name:"Cobalt Dragoon",weight:"37.6-38.0g",type:"attack",
+    tier:"S",burst:null,
+    strengths:["重量級攻擊手","可造成 Bit Burst","與 Wizard Rod / Phoenix Wing 對抗不落下風"],
+    weaknesses:["需要很強的發射力道","中空設計，無法有效 Spin Equalize","爆發依賴 launch 技術"],
+    combos:{
+      attack:"Cobalt Dragoon 5-60/9-60/3-60/1-60 + Cyclone/Point/Rush/Taper",
+      defense:"Cobalt Dragoon 5-60/9-60/3-60/1-60 + High Needle",
+      stamina:"Cobalt Dragoon 5-60/9-60/3-60/1-60 + Glide"
+    },
+    note:"需要技術門檻，但對付 meta blades 很強",
+    gameplan:"低徑+侵略性 Bit：必須強發射瞄準 KO"
+  },
+  {
+    name:"Silver Wolf",weight:"36.5-36.8g",type:"defense",
+    tier:"S",burst:null,
+    strengths:["重型防禦 blade","穩定的耐力","可破壞對手穩定性","Hexa combo 幾乎打不死"],
+    weaknesses:["有間隙，Burst 風險","上半部重量集中，易被破穩"],
+    combos:{
+      attack:"Silver Wolf 5-60/9-60/1-60/9-80 + Taper/Rush/Low Rush",
+      stamina:"Silver Wolf 5-60/9-60 + Ball/Orb/Disc Ball/Glide",
+      defense:"Silver Wolf 5-60/9-60/1-60/9-80/9-70 + High Needle/Defense/Hexa"
+    },
+    note:"防禦坦克，可破壞對手節奏",
+    gameplan:"耐力/防禦：傾斜硬發射；攻擊：平射"
+  },
+  {
+    name:"Tyranno Beat",weight:"36.7-37.1g",type:"attack",
+    tier:"S",burst:null,
+    strengths:["重量級","強 Smash Attack","可打敗 Wizard Rod","一致性强"],
+    weaknesses:["耐力稍差","需要技術"],
+    combos:{
+      attack:"Tyranno Beat 3-60/9-60/3-70 + Point/Rush/Taper",
+      stamina:"Tyranno Beat 3-60/9-60 + Ball/Orb",
+      defense:"Tyranno Beat 3-60/9-60 + Hexa/High Needle"
+    },
+    note:"能打敗 Wizard Rod 的黑馬，需 70 高度最佳",
+    gameplan:"低徑：強發射 + KO；防禦：傾斜硬發射"
+  },
+  {
+    name:"Aero Pegasus",weight:"37.9-38.3g",type:"balance",
+    tier:"S",burst:"有間隙，70 高度需注意",
+    strengths:["極重全能 blade","上攻擊+撞擊攻擊皆可","與 Wizard Rod / Dran Buster 對抗不差"],
+    weaknesses:["有間隙","耐力依賴發射力道","上半部重"],
+    combos:{
+      attack:"Aero Pegasus 5-60/9-60/3-60 + Cyclone/Rush/Taper/Point",
+      stamina:"Aero Pegasus 5-60/3-60/9-60 + Ball/Orb",
+      defense:"Aero Pegasus 5-70 Hexa"
+    },
+    note:"攻守兼備，是 S 級中最全能的 blade",
+    gameplan:"幾乎任何 combo 都適用"
+  },
+  {
+    name:"Dran Buster",weight:"36.5-37.0g",type:"attack",
+    tier:"S",burst:null,
+    strengths:["一擊 KO 能力最强","撞擊力碾壓"],
+    weaknesses:["耐力極低，玻璃大砲","上半部重，後期易傾倒","負面反作用力"],
+    combos:{
+      attack:"Dran Buster 1-60/5-60/7-60 + T/LF/P/F/R/LR"
+    },
+    note:"純攻擊型，需要高 RPM 和強 launch，風險高",
+    gameplan:"低徑+侵略性 Bit：必須快速結束比賽"
+  },
+  {
+    name:"Hells Scythe",weight:"?",type:"stamina",
+    tier:"S+",burst:null,
+    strengths:["頂級耐力+攻擊 combo","可用於防禦 combo","高耐力-攻擊 combo 人氣超高"],
+    weaknesses:["發射技術要求高"],
+    combos:{
+      attack:"Hells Scythe + Rush（需技術）",
+      defense:"Hells Scythe Ball（技術型防禦）",
+      stamina:"Hells Scythe Needle（人稱 'Siracha' combo）"
+    },
+    note:"日本超人氣，攻守都能組成 meta combo",
+    gameplan:"依賴技術，建議有一定經驗再使用"
+  },
+  {
+    name:"Hells Chain",weight:"?",type:"defense",
+    tier:"A",burst:null,
+    strengths:["防禦+耐力混合最佳","重量級","KO 抵抗力強"],
+    weaknesses:["比 Hells Scythe 稍遜"],
+    combos:{
+      defense:"Hells Chain 9-60 Orb",
+      stamina:"Hells Chain + Ball"
+    },
+    note:"防禦型代表之一",
+    gameplan:"防禦設定，用耐力拖垮對手"
+  },
+  {
+    name:"SharkScale",weight:"?",type:"attack",
+    tier:"S",burst:null,
+    strengths:["2025 下半年新崛起","讓三攻擊牌組變強","適合積極打法"],
+    weaknesses:["新零件，資料尚在累積"],
+    combos:{
+      attack:"SharkScale 4-50 Low Rush"
+    },
+    note:"改變了日本/泰國 meta 的組合",
+    gameplan:"快速進攻，壓制對手"
+  },
+  {
+    name:"Golem Rock",weight:"?",type:"defense",
+    tier:"A",burst:null,
+    strengths:["超高防禦","耐力也不差","特殊賽制好用"],
+    weaknesses:["重量導致靈活性較低"],
+    combos:{
+      defense:"Golem Rock + Orb / Ball"
+    },
+    note:"日本 INAZUMA盃特殊賽制熱門",
+    gameplan:"硬吃撞擊，持久取勝"
+  },
+  {
+    name:"Cobalt Drake",weight:"?",type:"attack",
+    tier:"A",burst:null,
+    strengths:["重量級","上攻擊能力"],
+    weaknesses:["需要強 launch"],
+    combos:{
+      attack:"Cobalt Drake 5-60/9-60 + Taper/Point"
+    },
+    note:"Cobalt Dragoon 的前身，性能穩定",
+    gameplan:"強 launch + 上攻擊"
+  },
+  {
+    name:"Draciel S",weight:"?",type:"defense",
+    tier:"A",burst:null,
+    strengths:["經典型防禦 blade","穩定性高"],
+    weaknesses:["攻擊力不足"],
+    combos:{
+      defense:"Draciel S + Orb/Hexa"
+    },
+    note:"經典系列，防禦型入門",
+    gameplan:"持久戰"
+  }
+];
+
+const RATCHETS = [
+  {id:"1-60",sides:1,height:"低",weight:"6.1g",type:"攻擊",note:"單點撞擊，純攻擊"},
+  {id:"1-80",sides:1,height:"高",weight:"6.5g",type:"攻擊",note:"高重心攻擊版"},
+  {id:"2-60",sides:2,height:"低",weight:"6.2g",type:"平衡",note:"基礎平衡"},
+  {id:"2-70",sides:2,height:"中",weight:"?",type:"平衡",note:""},
+  {id:"2-80",sides:2,height:"高",weight:"6.9g",type:"平衡",note:""},
+  {id:"3-60",sides:3,height:"低",weight:"6.3-6.4g",type:"平衡",note:"低重心，攻/耐力皆可，但 4-60 更優"},
+  {id:"3-70",sides:3,height:"中",weight:"6.4g",type:"平衡",note:""},
+  {id:"3-80",sides:3,height:"高",weight:"7.1g",type:"耐力",note:"高徑耐力型"},
+  {id:"3-85",sides:3,height:"超高",weight:"?",type:"耐力",note:"特殊用途"},
+  {id:"4-55",sides:4,height:"超低",weight:"?",type:"攻擊",note:"超低攻擊特化"},
+  {id:"4-60",sides:4,height:"低",weight:"6.4g",type:"平衡",note:"基礎低徑平衡，多面接觸"},
+  {id:"4-70",sides:4,height:"中",weight:"6.5g",type:"平衡",note:""},
+  {id:"4-80",sides:4,height:"高",weight:"7.0g",type:"耐力",note:""},
+  {id:"5-60",sides:5,height:"低",weight:"6.6g",type:"防守",note:"★最受歡迎低徑，防+耐力首選"},
+  {id:"5-70",sides:5,height:"中",weight:"6.7g",type:"防守",note:""},
+  {id:"5-80",sides:5,height:"高",weight:"7.2g",type:"耐力",note:""},
+  {id:"6-60",sides:6,height:"低",weight:"?",type:"平衡",note:""},
+  {id:"6-80",sides:6,height:"高",weight:"?",type:"耐力",note:""},
+  {id:"7-60",sides:7,height:"低",weight:"?",type:"平衡",note:""},
+  {id:"7-70",sides:7,height:"中",weight:"?",type:"耐力",note:""},
+  {id:"7-80",sides:7,height:"高",weight:"?",type:"耐力",note:""},
+  {id:"9-60",sides:9,height:"低",weight:"6.2g",type:"防守",note:"★最佳低徑，爆發耐力一體"},
+  {id:"9-70",sides:9,height:"中",weight:"?",type:"防守",note:""},
+  {id:"9-80",sides:9,height:"高",weight:"6.8g",type:"防守",note:""},
+  {id:"0-80",sides:"?",height:"高",weight:"?",type:"特殊",note:"特殊用途"}
+];
+
+const BITS = [
+  {name:"Rush",abbr:"R",weight:"2.1g",burst:80,type:"攻擊",note:"Xtreme Line專用，最穩定"},
+  {name:"Low Rush",abbr:"LR",weight:"1.9g",burst:80,type:"攻擊",note:"Rush短版，攻擊更集中"},
+  {name:"Ball",abbr:"B",weight:"2.1g",burst:20,type:"耐力",note:"純耐力王"},
+  {name:"Free Ball",abbr:"FB",weight:"2.0g",burst:20,type:"耐力",note:"Ball旋轉版，帶防禦"},
+  {name:"Orb",abbr:"O",weight:"?",burst:20,type:"防禦",note:"圓弧穩定型"},
+  {name:"Under Needle",abbr:"UN",weight:"1.8g",burst:20,type:"防禦",note:"坦克針地，防+耐力"},
+  {name:"Needle",abbr:"N",weight:"2.0g",burst:"?",type:"防禦",note:"防守針形"},
+  {name:"High Needle",abbr:"HN",weight:"2.2g",burst:"?",type:"防禦",note:"高徑防禦"},
+  {name:"Hexa",abbr:"H",weight:"2.6g",burst:80,type:"防禦",note:"★防守+耐力，六角齒輪"},
+  {name:"Level",abbr:"L",weight:"2.6g",burst:80,type:"平衡",note:"Xtreme Dash，攻守兩用"},
+  {name:"Elevate",abbr:"E",weight:"3.2g",burst:"低",type:"平衡",note:"曲線移動，KO潛力高"},
+  {name:"Taper",abbr:"T",weight:"2.2g",burst:"?",type:"攻擊",note:"錐形，KO能力強"},
+  {name:"Flat",abbr:"F",weight:"2.3g",burst:"?",type:"攻擊",note:"平面接觸"},
+  {name:"Point",abbr:"P",weight:"?",burst:"?",type:"攻擊",note:"尖銳，高爆發"},
+  {name:"Spike",abbr:"S",weight:"?",burst:"?",type:"攻擊",note:"尖刺"},
+  {name:"Accel",abbr:"A",weight:"?",burst:"?",type:"攻擊",note:"加速型"},
+  {name:"Gear Flat",abbr:"GF",weight:"?",burst:"?",type:"攻擊",note:"齒輪平面"},
+  {name:"Gear Point",abbr:"GP",weight:"?",burst:"?",type:"攻擊",note:"齒輪尖點"},
+  {name:"Gear Ball",abbr:"GB",weight:"?",burst:"?",type:"耐力",note:"齒輪球底"},
+  {name:"Gear Needle",abbr:"GN",weight:"?",burst:"?",type:"防禦",note:"齒輪針形"},
+  {name:"Cyclone",abbr:"C",weight:"?",burst:"?",type:"攻擊",note:"旋風節奏"},
+  {name:"Glide",abbr:"G",weight:"?",burst:"?",type:"耐力",note:"滑行耐力型"},
+  {name:"Disc Ball",abbr:"DB",weight:"?",burst:"?",type:"耐力",note:"圓盤+球底"},
+  {name:"Low Flat",abbr:"LF",weight:"?",burst:"?",type:"攻擊",note:"低徑平面"},
+  {name:"Wedge",abbr:"W",weight:"?",burst:"?",type:"防禦",note:"楔形防禦"},
+  {name:"Metal Needle",abbr:"MN",weight:"?",burst:"?",type:"防禦",note:"金屬針"},
+  {name:"Unite",abbr:"U",weight:"?",burst:"?",type:"平衡",note:"統一型"},
+  {name:"Quake",abbr:"Q",weight:"?",burst:"?",type:"防禦",note:"震動型"},
+  {name:"Vortex",abbr:"V",weight:"?",burst:"?",type:"攻擊",note:"漩渦型"},
+  {name:"Rubber Accel",abbr:"RA",weight:"?",burst:"?",type:"攻擊",note:"橡膠加速"}
+];
+
+const COMBOS = [
+  {name:"純攻擊 - 速戰速決",type:"attack",parts:["Phoenix Wing","1-60","Low Rush"],note:"爆發力最强，低徑 Xtreme Dash"},
+  {name:"純攻擊 - 大砲型",type:"attack",parts:["Dran Buster","1-60","Taper/LF"],note:"一擊脫離，需要強 launch"},
+  {name:"攻擊 - 穩定型",type:"attack",parts:["Cobalt Dragoon","5-60","Point"],note:"重量級 KO，比 Phoenix 需更高技術"},
+  {name:"耐力 - 標準版",type:"stamina",parts:["Wizard Rod","3-60","Ball"],note:"Gold Standard，純耐力"},
+  {name:"耐力 - 防守耐力",type:"stamina",parts:["Wizard Rod","5-60","Ball"],note:"更穩定，比 3-60 更好防禦"},
+  {name:"耐力 - 重型版",type:"stamina",parts:["Cobalt Dragoon","5-60","Glide"],note:"重量級耐力"},
+  {name:"防禦 - 坦克版",type:"defense",parts:["Silver Wolf","9-60","Under Needle"],note:"針地坦克，KO抵抗力極强"},
+  {name:"防禦 - Hexa版",type:"defense",parts:["Wizard Rod","5-70","Hexa"],note:"傾斜發射後幾乎不敗"},
+  {name:"防禦 - 頂級版",type:"defense",parts:["Tyranno Beat","3-60","Hexa"],note:"第二好的 Hexa blade"},
+  {name:"平衡 - 萬用型",type:"balance",parts:["Aero Pegasus","7-60","Level"],note:"平衡全能，適應性廣"},
+  {name:"平衡 - 曲線KO型",type:"balance",parts:["Wizard Rod","5-60","Elevate"],note:"Elevate 曲線獨特，可有意外 KO"},
+  {name:"NorCal Special",type:"stamina",parts:["Wizard Rod","3-60","Ball"],note:"美國北加州冠軍配置"}
+];
+
+// ─── RENDER ─────────────────────────────────────────────────────
+const typeLabel={attack:"攻擊型",defense:"防禦型",stamina:"耐力型",balance:"平衡型"};
+const typeClass={attack:"type-attack",defense:"type-defense",stamina:"type-stamina",balance:"type-balance"};
+const tierBadge={S:"tag-tier-s","S+":"tag-tier-s",A:"tag-tier-a",B:"tag-tier-b"};
+
+function renderBlades(filter="",fAttack,fDefense,fStamina,fBalance){
+  const grid=document.getElementById("bladeGrid");
+  const filtered=BLADES.filter(b=>{
+    const matchName=b.name.toLowerCase().includes(filter.toLowerCase());
+    const matchType=(!fAttack&&!fDefense&&!fStamina&&!fBalance)||
+      (fAttack&&b.type==="attack")||(fDefense&&b.type==="defense")||
+      (fStamina&&b.type==="stamina")||(fBalance&&b.type==="balance");
+    return matchName&&matchType;
+  });
+  document.getElementById("bladeCount").textContent=`共 ${filtered.length} 個 blades`;
+  grid.innerHTML=filtered.map(b=>`
+    <div class="blade-card" onclick="toggleCard(this)">
+      <div class="blade-header">
+        <div>
+          <span class="blade-name">${b.name}</span>
+          <span class="blade-weight">${b.weight}</span>
+        </div>
+        <span class="blade-type ${typeClass[b.type]}">${typeLabel[b.type]}</span>
+      </div>
+      <div class="blade-tags">
+        <span class="tag ${tierBadge[b.tier]||'tag-tier-a'}">Tier ${b.tier}</span>
+        <span class="tag">${b.note.split('，')[0]}</span>
+      </div>
+      <div class="blade-detail">
+        <dl class="detail-grid">
+          <dt>發射建議</dt><dd>${b.gameplan}</dd>
+          ${b.burst?`<dt>Burst風險</dt><dd>${b.burst}</dd>`:""}
+          <dt>簡評</dt><dd>${b.note}</dd>
+        </dl>
+        <div class="pros-cons">
+          <div class="pros"><div class="pros-title">✓ 優勢</div><ul>${b.strengths.map(s=>`<li>${s}</li>`).join("")}</ul></div>
+          <div class="cons"><div class="cons-title">✗ 劣勢</div><ul>${b.weaknesses.map(w=>`<li>${w}</li>`).join("")}</ul></div>
+        </div>
+        <div class="combos-section">
+          <div class="combos-title">⚙️ 推薦 Combo</div>
+          ${Object.entries(b.combos).map(([type,combo])=>`
+            <div class="combo-row">
+              <span class="tag" style="background:var(--card2)">${typeLabel[type]||type}</span>
+              <span class="combo-part blade-part">${combo.split("+")[0].trim()}</span>
+              <span style="color:var(--muted)">+</span>
+              <span class="combo-part rach">${combo.split("+")[1].trim()}</span>
+              <span style="color:var(--muted)">+</span>
+              <span class="combo-part bit">${combo.split("+")[2]?combo.split("+")[2].trim():"—"}</span>
+            </div>`).join("")}
+        </div>
+      </div>
+    </div>`).join("");
+}
+
+function renderRatchets(filter=""){
+  const tbody=document.getElementById("rachTable");
+  const filtered=RATCHETS.filter(r=>r.id.includes(filter)||r.note.toLowerCase().includes(filter.toLowerCase()));
+  tbody.innerHTML=filtered.map(r=>`<tr>
+    <td><strong>${r.id}</strong></td><td>${r.sides}</td><td>${r.height}</td>
+    <td>${r.weight}</td><td><span class="blade-type type-${r.type==='攻擊'?'attack':r.type==='防禦'?'defense':r.type==='耐力'?'stamina':'balance'}">${r.type}</span></td>
+    <td>${r.note}</td>
+  </tr>`).join("");
+}
+
+function renderBits(filter=""){
+  const tbody=document.getElementById("bitTable");
+  const filtered=BITS.filter(b=>b.name.toLowerCase().includes(filter.toLowerCase())||b.abbr.toLowerCase().includes(filter.toLowerCase())||b.note.toLowerCase().includes(filter.toLowerCase()));
+  tbody.innerHTML=filtered.map(b=>`<tr>
+    <td><strong>${b.name}</strong></td><td>${b.abbr}</td><td>${b.weight||'?'}</td>
+    <td>${b.burst}</td><td><span class="blade-type type-${b.type==='攻擊'?'attack':b.type==='防禦'?'defense':b.type==='耐力'?'stamina':'balance'}">${b.type}</span></td>
+    <td>${b.note}</td>
+  </tr>`).join("");
+}
+
+function renderCombos(filter="",fAttack,fDefense,fStamina){
+  const grid=document.getElementById("comboGrid");
+  const filtered=COMBOS.filter(c=>{
+    const matchName=c.name.toLowerCase().includes(filter.toLowerCase())||c.parts.join(" ").toLowerCase().includes(filter.toLowerCase());
+    const matchType=(!fAttack&&!fDefense&&!fStamina)||
+      (fAttack&&c.type==="attack")||(fDefense&&c.type==="defense")||(fStamina&&c.type==="stamina");
+    return matchName&&matchType;
+  });
+  grid.innerHTML=filtered.map(c=>`<div class="blade-card" style="cursor:default">
+    <div class="blade-header">
+      <div><span class="blade-name">${c.name}</span></div>
+      <span class="blade-type type-${c.type==='attack'?'attack':c.type==='defense'?'defense':'stamina'}">${typeLabel[c.type]}</span>
+    </div>
+    <div class="combo-row" style="margin-top:.5rem">
+      <span class="combo-part blade-part">${c.parts[0]}</span>
+      <span style="color:var(--muted)">+</span>
+      <span class="combo-part rach">${c.parts[1]}</span>
+      <span style="color:var(--muted)">+</span>
+      <span class="combo-part bit">${c.parts[2]}</span>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted);margin-top:.5rem">${c.note}</p>
+  </div>`).join("");
+}
+
+// ─── INTERACTIONS ────────────────────────────────────────────────
+function toggleCard(el){el.classList.toggle("expanded")}
+
+document.querySelectorAll(".tab-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("panel-"+btn.dataset.tab).classList.add("active");
+  });
+});
+
+document.getElementById("searchBlade").addEventListener("input",e=>{
+  renderBlades(e.target.value,
+    document.getElementById("filterAttack").checked,
+    document.getElementById("filterDefense").checked,
+    document.getElementById("filterStamina").checked,
+    document.getElementById("filterBalance").checked);
+});
+["filterAttack","filterDefense","filterStamina","filterBalance"].forEach(id=>{
+  document.getElementById(id).addEventListener("change",()=>{
+    const s=document.getElementById("searchBlade").value;
+    renderBlades(s,
+      document.getElementById("filterAttack").checked,
+      document.getElementById("filterDefense").checked,
+      document.getElementById("filterStamina").checked,
+      document.getElementById("filterBalance").checked);
+  });
+});
+
+document.getElementById("searchRach").addEventListener("input",e=>renderRatchets(e.target.value));
+document.getElementById("searchBit").addEventListener("input",e=>renderBits(e.target.value));
+
+document.getElementById("searchCombo").addEventListener("input",e=>{
+  renderCombos(e.target.value,
+    document.getElementById("filterComboAttack").checked,
+    document.getElementById("filterComboDefense").checked,
+    document.getElementById("filterComboStamina").checked);
+});
+["filterComboAttack","filterComboDefense","filterComboStamina"].forEach(id=>{
+  document.getElementById(id).addEventListener("change",()=>{
+    const s=document.getElementById("searchCombo").value;
+    renderCombos(s,
+      document.getElementById("filterComboAttack").checked,
+      document.getElementById("filterComboDefense").checked,
+      document.getElementById("filterComboStamina").checked);
+  });
+});
+
+function closeOverlay(){document.getElementById("overlay").classList.remove("open");}
+
+// ─── INIT ────────────────────────────────────────────────────────
+renderBlades();
+renderRatchets();
+renderBits();
+renderCombos();
+</script>
+</body>
+</html>
