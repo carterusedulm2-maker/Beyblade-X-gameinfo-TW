@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-戰鬥陀螺比賽資訊爬蟲 v3
+戰鬥陀螺比賽資訊爬蟲 v4
 ========================================
 策略：
-1. 從 HackMD 解析所有期程的 Spreadsheet URL
-2. 對每個 URL 嘗試抓取 CSV
-3. 如果某期程 HackMD URL 抓不到資料 → 用現有 events.json 裡的舊資料保留
-4. 如果是最新期程且 HackMD 失敗 → 用已知有效的 direct link 作為 fallback
+1. 預先載入 KNOWN_GOOD_LINKS（不管 HackMD 有沒有）
+2. 從 HackMD 解析所有期程的 Spreadsheet URL
+3. 對每個 URL 嘗試抓取 CSV
+4. 如果某期程 HackMD URL 抓不到資料 → 用現有 events.json 裡的舊資料保留
+5. 如果是最新期程且 HackMD 失敗 → 用已知有效的 direct link 作為 fallback
 """
 
 import csv
@@ -22,12 +23,9 @@ from collections import Counter
 HACKMD_URL = "https://hackmd.io/@liangyutw/beyblade-important-record"
 SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
 
-# 最新期程（5-6月）的已知有效 direct link（HackMD 可能未即時更新）
-# 當 HackMD 對最新期程抓不到資料時使用
 # 已知有效的直接連結（當 HackMD URL 抓不到或抓到少於預期時使用）
 # 格式：period -> {source_name: sheet_id}
 KNOWN_GOOD_LINKS = {
-    # Carter 分享的 B4 5-6月連結（HackMD 的版本是錯的）
     "2026-5、6月": {
         "B4合作據點G3 (2026-5、6月)": "10fcGvFS9W_-pVQSb0Pv3QJB2jVktM3kw34dY0ymuiqY",
     },
@@ -188,7 +186,6 @@ def parse_csv_sheet(csv_text: str, source_name: str) -> list:
 
 
 def fetch_sheet(source_name: str, sheet_id: str) -> tuple:
-    """Try to fetch a sheet. Returns (events, error_msg)."""
     url = SHEETS_CSV_URL.format(sheet_id=sheet_id)
     try:
         csv_text = fetch_url(url)
@@ -199,10 +196,7 @@ def fetch_sheet(source_name: str, sheet_id: str) -> tuple:
 
 
 def parse_hackmd_all_sheets(html: str) -> list:
-    """Parse all period rows from HackMD markdown."""
     results = []
-    # Pattern: | period | [G3](url) | [B4](url) |
-    # Handle both /edit?gid=... and /edit?usp=sharing variants
     row_pattern = re.compile(
         r'\|\s*(\d{4}[-年]\d{1,2}[、/]\d{1,2}月)\s*\|'
         r'\s*\[G3\]\(https://docs\.google\.com/spreadsheets/d/([a-zA-Z0-9_-]+)(?:/[^)]+)?\)\s*\|'
@@ -226,21 +220,17 @@ def parse_hackmd_all_sheets(html: str) -> list:
 
 
 def get_source_name(source_type: str, period: str) -> str:
-    """Get formatted source name."""
     return f"{source_type} ({period})"
 
 
 def main():
-    # Load existing events.json as fallback for periods where HackMD fails
+    # Load existing events.json as fallback
     existing_events = []
-    existing_sources = []
     try:
         with open("events.json", "r") as f:
             existing_data = json.load(f)
             existing_events = existing_data.get("events", [])
-            existing_sources = existing_data.get("sources", [])
             print(f"Loaded {len(existing_events)} events from existing events.json")
-            # Index existing events by source
             existing_by_source = {}
             for e in existing_events:
                 src = e["source"]
@@ -250,87 +240,115 @@ def main():
     except Exception as e:
         print(f"  No existing events.json found: {e}")
         existing_by_source = {}
-    
-    # Fetch HackMD
-    print("Fetching HackMD index page...")
+
+    all_events = []
+    all_sources = []
+    sources_processed = set()  # Track which (period, type) we've handled
+
+    # =================================================================
+    # STEP 1: PRE-LOAD from KNOWN_GOOD_LINKS
+    # This runs FIRST so that even if HackMD doesn't have the latest
+    # period (e.g. 5-6月), we still include the data.
+    # =================================================================
+    print("\n[Step 1] Pre-loading KNOWN_GOOD_LINKS...")
+    for period, sources_dict in KNOWN_GOOD_LINKS.items():
+        for src_name, sheet_id in sources_dict.items():
+            evs, err = fetch_sheet(src_name, sheet_id)
+            if evs:
+                all_events.extend(evs)
+                all_sources.append({"name": src_name, "sheet_id": sheet_id, "source": "known_good"})
+                sources_processed.add(src_name)
+                print(f"  ★ {src_name}: {len(evs)} events (from KNOWN_GOOD_LINKS)")
+            else:
+                # Fall back to existing events for this source
+                existing = [e for e in existing_events if e["source"] == src_name]
+                if existing:
+                    all_events.extend(existing)
+                    all_sources.append({"name": src_name, "sheet_id": sheet_id, "source": "existing"})
+                    print(f"  ~ {src_name}: kept {len(existing)} existing events (known_good failed: {err})")
+                else:
+                    print(f"  ✗ {src_name}: no events (known_good failed: {err}), no existing fallback")
+
+    # =================================================================
+    # STEP 2: Fetch and process HackMD
+    # =================================================================
+    print("\n[Step 2] Fetching HackMD index page...")
     try:
         hackmd_html = fetch_url(HACKMD_URL)
         hackmd_rows = parse_hackmd_all_sheets(hackmd_html)
     except Exception as e:
         print(f"HackMD fetch failed: {e}")
         hackmd_rows = []
-    
-    all_events = []
-    all_sources = []
-    sources_with_new_data = set()
-    
-    # Process each period from HackMD
+
     for row in hackmd_rows:
         period = row["period"]
-        
-        # Try Funbox
+
+        # ---- Funbox ----
         funbox_name = get_source_name("Funbox門市G3", period)
-        funbox_events, funbox_err = fetch_sheet(funbox_name, row["funbox_id"])
-        if funbox_events:
-            all_events.extend(funbox_events)
-            all_sources.append({"name": funbox_name, "sheet_id": row["funbox_id"]})
-            sources_with_new_data.add(funbox_name)
-            print(f"  ✓ {funbox_name}: {len(funbox_events)} events")
+        if funbox_name in sources_processed:
+            existing = [e for e in all_events if e["source"] == funbox_name]
+            print(f"  → {funbox_name}: already pre-loaded ({len(existing)} events), skipping HackMD")
         else:
-            # Fallback: keep existing events for this source
-            existing = [e for e in existing_events if e["source"] == funbox_name]
-            if existing:
-                all_events.extend(existing)
-                all_sources.append({"name": funbox_name, "sheet_id": row["funbox_id"], "source": "existing"})
-                print(f"  ~ {funbox_name}: kept {len(existing)} existing events (HackMD failed: {funbox_err})")
+            funbox_events, funbox_err = fetch_sheet(funbox_name, row["funbox_id"])
+            if funbox_events:
+                all_events.extend(funbox_events)
+                all_sources.append({"name": funbox_name, "sheet_id": row["funbox_id"]})
+                sources_processed.add(funbox_name)
+                print(f"  ✓ {funbox_name}: {len(funbox_events)} events")
             else:
-                print(f"  ✗ {funbox_name}: no events, no fallback (error: {funbox_err})")
-        
-        # Try B4
-        b4_name = get_source_name("B4合作據點G3", period)
-        b4_events, b4_err = fetch_sheet(b4_name, row["b4_id"])
-        
-        # Detect if B4 URL is wrong: if it returns nearly the same count as Funbox,
-        # it means Funbox and B4 are pointing to the same sheet (HackMD error)
-        b4_is_wrong = (len(b4_events) > 0 and len(b4_events) == len(funbox_events))
-        
-        if b4_events and not b4_is_wrong:
-            all_events.extend(b4_events)
-            all_sources.append({"name": b4_name, "sheet_id": row["b4_id"]})
-            sources_with_new_data.add(b4_name)
-            print(f"  ✓ {b4_name}: {len(b4_events)} events")
-        else:
-            if b4_is_wrong:
-                print(f"  B4 URL returns same as Funbox ({len(b4_events)} events) -- likely HackMD error, trying direct link...")
-            # Fallback 1: known good direct link
-            direct_link_used = False
-            if period in KNOWN_GOOD_LINKS and b4_name in KNOWN_GOOD_LINKS[period]:
-                direct_id = KNOWN_GOOD_LINKS[period][b4_name]
-                print(f"  Trying known good direct link for {period}...")
-                b4_events2, b4_err2 = fetch_sheet(b4_name, direct_id)
-                if b4_events2:
-                    all_events.extend(b4_events2)
-                    all_sources.append({"name": b4_name, "sheet_id": direct_id, "source": "known_good_direct"})
-                    sources_with_new_data.add(b4_name)
-                    print(f"  ✓ {b4_name} (direct): {len(b4_events2)} events")
-                    direct_link_used = True
-            
-            if not direct_link_used:
-                # Fallback 2: keep existing events for this source
-                existing = [e for e in existing_events if e["source"] == b4_name]
+                existing = [e for e in existing_events if e["source"] == funbox_name]
                 if existing:
                     all_events.extend(existing)
-                    all_sources.append({"name": b4_name, "sheet_id": row["b4_id"], "source": "existing"})
-                    print(f"  ~ {b4_name}: kept {len(existing)} existing events")
+                    all_sources.append({"name": funbox_name, "sheet_id": row["funbox_id"], "source": "existing"})
+                    print(f"  ~ {funbox_name}: kept {len(existing)} existing events (HackMD failed: {funbox_err})")
                 else:
-                    err_msg = b4_err if b4_is_wrong else f"no events (error: {b4_err})"
-                    print(f"  ✗ {b4_name}: {err_msg}")
-    
+                    print(f"  ✗ {funbox_name}: no events, no fallback (error: {funbox_err})")
+
+        # ---- B4 ----
+        b4_name = get_source_name("B4合作據點G3", period)
+        if b4_name in sources_processed:
+            existing = [e for e in all_events if e["source"] == b4_name]
+            print(f"  → {b4_name}: already pre-loaded ({len(existing)} events), skipping HackMD")
+        else:
+            b4_events, b4_err = fetch_sheet(b4_name, row["b4_id"])
+            b4_is_wrong = (len(b4_events) > 0 and funbox_events and
+                           len(b4_events) == len(funbox_events))
+
+            if b4_events and not b4_is_wrong:
+                all_events.extend(b4_events)
+                all_sources.append({"name": b4_name, "sheet_id": row["b4_id"]})
+                sources_processed.add(b4_name)
+                print(f"  ✓ {b4_name}: {len(b4_events)} events")
+            else:
+                direct_link_used = False
+                if b4_is_wrong:
+                    print(f"  B4 URL returns same as Funbox ({len(b4_events)}) -- likely HackMD error")
+                if period in KNOWN_GOOD_LINKS and b4_name in KNOWN_GOOD_LINKS[period]:
+                    direct_id = KNOWN_GOOD_LINKS[period][b4_name]
+                    print(f"  Trying known good direct link for {period}...")
+                    b4_events2, b4_err2 = fetch_sheet(b4_name, direct_id)
+                    if b4_events2:
+                        all_events.extend(b4_events2)
+                        all_sources.append({"name": b4_name, "sheet_id": direct_id, "source": "known_good_direct"})
+                        sources_processed.add(b4_name)
+                        print(f"  ✓ {b4_name} (direct): {len(b4_events2)} events")
+                        direct_link_used = True
+
+                if not direct_link_used:
+                    existing = [e for e in existing_events if e["source"] == b4_name]
+                    if existing:
+                        all_events.extend(existing)
+                        all_sources.append({"name": b4_name, "sheet_id": row["b4_id"], "source": "existing"})
+                        print(f"  ~ {b4_name}: kept {len(existing)} existing events")
+                    else:
+                        err_msg = b4_err if b4_is_wrong else f"no events (error: {b4_err})"
+                        print(f"  ✗ {b4_name}: {err_msg}")
+
     # Validate
     if not all_events:
         print("\nERROR: No events found at all!")
         sys.exit(1)
-    
+
     # Deduplicate
     seen = set()
     deduped = []
@@ -339,24 +357,24 @@ def main():
         if key not in seen:
             seen.add(key)
             deduped.append(ev)
-    
+
     # Sort and assign IDs
     deduped.sort(key=lambda e: e["date"], reverse=True)
     for i, event in enumerate(deduped, 1):
         prefix = "funbox" if "Funbox" in event["source"] else "b4"
         event["id"] = f"{prefix}-{i:03d}"
-    
+
     output = {
         "lastUpdated": date.today().isoformat(),
         "sources": all_sources,
         "events": deduped,
     }
-    
+
     with open("events.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    
+
     print(f"\n✓ Done! {len(deduped)} events written to events.json")
-    
+
     months = Counter(e['date'][:7] for e in deduped)
     print("\n每月比賽數：")
     for m, n in sorted(months.items()):
