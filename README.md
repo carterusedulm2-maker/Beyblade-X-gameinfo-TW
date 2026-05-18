@@ -8,7 +8,7 @@
 - 🔍 按縣市、報名方式、賽制篩選
 - ↕️ 按日期、名額排序
 - 📱 手機友善 RWD
-- ⏰ 每月自動更新（GitHub Actions）
+- ⏰ 每日自動檢查更新（GitHub Actions）
 
 ## 資料來源
 
@@ -25,4 +25,4 @@ python3 -m http.server 8000 # 啟動本地伺服器
 
 ## 部署
 
-GitHub Pages 自動部署，每月 1 號自動更新資料。
+GitHub Pages 自動部署，每天自動檢查資料來源並更新資料。

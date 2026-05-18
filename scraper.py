@@ -195,27 +195,50 @@ def fetch_sheet(source_name: str, sheet_id: str) -> tuple:
         return [], str(e)
 
 
+def normalize_period(period: str) -> str:
+    return re.sub(r'(\d{4})[-年](\d{1,2})[、/](\d{1,2})月',
+                  r'\1-\2、\3月', period.strip())
+
+
+def extract_sheet_id(cell: str) -> str:
+    m = re.search(r'docs\.google\.com/spreadsheets/d/([a-zA-Z0-9_-]+)', cell)
+    return m.group(1) if m else ""
+
+
 def parse_hackmd_all_sheets(html: str) -> list:
     results = []
-    row_pattern = re.compile(
-        r'\|\s*(\d{4}[-年]\d{1,2}[、/]\d{1,2}月)\s*\|'
-        r'\s*\[G3\]\(https://docs\.google\.com/spreadsheets/d/([a-zA-Z0-9_-]+)(?:/[^)]+)?\)\s*\|'
-        r'\s*\[B4\]\(https://docs\.google\.com/spreadsheets/d/([a-zA-Z0-9_-]+)(?:/[^)]+)?\)\s*\|'
-    )
-    matches = list(row_pattern.finditer(html))
-    print(f"  Found {len(matches)} period rows in HackMD")
-    for m in matches:
-        period = m.group(1)
-        funbox_id = m.group(2)
-        b4_id = m.group(3)
-        period_norm = re.sub(r'(\d{4})[-年](\d{1,2})[、/](\d{1,2})月',
-                            r'\1-\2、\3月', period)
+    seen_periods = set()
+    period_pattern = re.compile(r'^\s*\|\s*(\d{4}[-年]\d{1,2}[、/]\d{1,2}月)\s*\|')
+
+    for line in html.splitlines():
+        m = period_pattern.match(line)
+        if not m:
+            continue
+
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 3:
+            continue
+
+        period_norm = normalize_period(cells[0])
+        if period_norm in seen_periods:
+            continue
+
+        funbox_id = extract_sheet_id(cells[1])
+        b4_id = extract_sheet_id(cells[2])
+        if not funbox_id and not b4_id:
+            continue
+
+        seen_periods.add(period_norm)
         results.append({
             "period": period_norm,
             "funbox_id": funbox_id,
             "b4_id": b4_id,
         })
-        print(f"    {period_norm}: Funbox={funbox_id[:16]}..., B4={b4_id[:16]}...")
+        funbox_label = f"{funbox_id[:16]}..." if funbox_id else "missing"
+        b4_label = f"{b4_id[:16]}..." if b4_id else "missing"
+        print(f"    {period_norm}: Funbox={funbox_label}, B4={b4_label}")
+
+    print(f"  Found {len(results)} period rows in HackMD")
     return results
 
 
@@ -285,10 +308,12 @@ def main():
 
         # ---- Funbox ----
         funbox_name = get_source_name("Funbox門市G3", period)
+        funbox_events = []
         if funbox_name in sources_processed:
             existing = [e for e in all_events if e["source"] == funbox_name]
             print(f"  → {funbox_name}: already pre-loaded ({len(existing)} events), skipping HackMD")
-        else:
+            funbox_events = existing
+        elif row["funbox_id"]:
             funbox_events, funbox_err = fetch_sheet(funbox_name, row["funbox_id"])
             if funbox_events:
                 all_events.extend(funbox_events)
@@ -303,6 +328,15 @@ def main():
                     print(f"  ~ {funbox_name}: kept {len(existing)} existing events (HackMD failed: {funbox_err})")
                 else:
                     print(f"  ✗ {funbox_name}: no events, no fallback (error: {funbox_err})")
+        else:
+            existing = [e for e in existing_events if e["source"] == funbox_name]
+            if existing:
+                all_events.extend(existing)
+                all_sources.append({"name": funbox_name, "sheet_id": "", "source": "existing"})
+                funbox_events = existing
+                print(f"  ~ {funbox_name}: kept {len(existing)} existing events (HackMD URL missing)")
+            else:
+                print(f"  - {funbox_name}: HackMD URL missing, no existing fallback")
 
         # ---- B4 ----
         b4_name = get_source_name("B4合作據點G3", period)
@@ -310,7 +344,10 @@ def main():
             existing = [e for e in all_events if e["source"] == b4_name]
             print(f"  → {b4_name}: already pre-loaded ({len(existing)} events), skipping HackMD")
         else:
-            b4_events, b4_err = fetch_sheet(b4_name, row["b4_id"])
+            if row["b4_id"]:
+                b4_events, b4_err = fetch_sheet(b4_name, row["b4_id"])
+            else:
+                b4_events, b4_err = [], "HackMD URL missing"
             b4_is_wrong = (len(b4_events) > 0 and funbox_events and
                            len(b4_events) == len(funbox_events))
 
