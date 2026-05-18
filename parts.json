@@ -1,0 +1,1690 @@
+{
+  "metadata": {
+    "title": "Beyblade X 零件 & Combo 分析",
+    "lastUpdated": "2026-05-19",
+    "dataThrough": "2026-05",
+    "note": "整合 beybxdb 零件表、BeyBase 2026-05-18 buyer guide、BBX Weekly 2026-W18 meta。",
+    "sources": [
+      {
+        "name": "beybxdb Release List / Parts",
+        "url": "https://www.beybxdb.com/beyblade-product-list/release-list"
+      },
+      {
+        "name": "BeyBase Buyer Guide",
+        "url": "https://beybase.com/beyblade-x-buyers-guide-best-combos/"
+      },
+      {
+        "name": "BBX Weekly 2026-W18",
+        "url": "https://www.bbxweekly.com/"
+      }
+    ]
+  },
+  "blades": [
+    {
+      "name": "Wizard Rod",
+      "weight": "35.2-35.8g",
+      "type": "stamina",
+      "tier": "S+",
+      "burst": null,
+      "strengths": [
+        "極重耐力 blade",
+        "頂級續航力",
+        "良好防禦表現",
+        "重量可減少 Burst 風險"
+      ],
+      "weaknesses": [
+        "有間隙，些微 Burst 風險"
+      ],
+      "combos": {
+        "attack": "Wizard Rod 5-60/9-60/1-60 + Taper/Rush/Low Rush",
+        "stamina": "Wizard Rod 5-60/9-60/7-60 + Ball/Orb/Disc Ball",
+        "defense": "Wizard Rod 5-70 Hexa / 5-60/7-60 + High Needle/Defense"
+      },
+      "note": "2026年 metas 的黃金標準，必須要有的 blade",
+      "gameplan": "耐力/防禦：傾斜硬發射；攻擊：平射",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Phoenix Wing",
+      "weight": "37.9-39.1g",
+      "type": "attack",
+      "tier": "S+",
+      "burst": "有間隙，9-60 或 5-60 推薦",
+      "strengths": [
+        "最重攻擊 blade 之一",
+        "硬 Smash Attack",
+        "容易使用",
+        "耐力/防禦也不差"
+      ],
+      "weaknesses": [
+        "顶部重，比賽後期容易傾倒",
+        "有間隙，易 Burst"
+      ],
+      "combos": {
+        "attack": "Phoenix Wing 9-60/5-60/7-60 + Rush/Flat",
+        "balance": "Phoenix Wing 9-60/5-60/7-60/7-70/5-70/3-70 + Taper/Point/Hexa"
+      },
+      "note": "新手最推薦的攻擊手，CP值最高",
+      "gameplan": "低徑攻擊 combo 最佳，70高度適合攻擊向下打擊",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Cobalt Dragoon",
+      "weight": "37.6-38.0g",
+      "type": "attack",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "重量級攻擊手",
+        "可造成 Bit Burst",
+        "與 Wizard Rod / Phoenix Wing 對抗不落下風"
+      ],
+      "weaknesses": [
+        "需要很強的發射力道",
+        "中空設計，無法有效 Spin Equalize",
+        "爆發依賴 launch 技術"
+      ],
+      "combos": {
+        "attack": "Cobalt Dragoon 5-60/9-60/3-60/1-60 + Cyclone/Point/Rush/Taper",
+        "defense": "Cobalt Dragoon 5-60/9-60/3-60/1-60 + High Needle",
+        "stamina": "Cobalt Dragoon 5-60/9-60/3-60/1-60 + Glide"
+      },
+      "note": "需要技術門檻，但對付 meta blades 很強",
+      "gameplan": "低徑+侵略性 Bit：必須強發射瞄準 KO",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Silver Wolf",
+      "weight": "36.5-36.8g",
+      "type": "defense",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "重型防禦 blade",
+        "穩定的耐力",
+        "可破壞對手穩定性",
+        "Hexa combo 幾乎打不死"
+      ],
+      "weaknesses": [
+        "有間隙，Burst 風險",
+        "上半部重量集中，易被破穩"
+      ],
+      "combos": {
+        "attack": "Silver Wolf 5-60/9-60/1-60/9-80 + Taper/Rush/Low Rush",
+        "stamina": "Silver Wolf 5-60/9-60 + Ball/Orb/Disc Ball/Glide",
+        "defense": "Silver Wolf 5-60/9-60/1-60/9-80/9-70 + High Needle/Defense/Hexa"
+      },
+      "note": "防禦坦克，可破壞對手節奏",
+      "gameplan": "耐力/防禦：傾斜硬發射；攻擊：平射",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Tyranno Beat",
+      "weight": "36.7-37.1g",
+      "type": "attack",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "重量級",
+        "強 Smash Attack",
+        "可打敗 Wizard Rod",
+        "一致性强"
+      ],
+      "weaknesses": [
+        "耐力稍差",
+        "需要技術"
+      ],
+      "combos": {
+        "attack": "Tyranno Beat 3-60/9-60/3-70 + Point/Rush/Taper",
+        "stamina": "Tyranno Beat 3-60/9-60 + Ball/Orb",
+        "defense": "Tyranno Beat 3-60/9-60 + Hexa/High Needle"
+      },
+      "note": "能打敗 Wizard Rod 的黑馬，需 70 高度最佳",
+      "gameplan": "低徑：強發射 + KO；防禦：傾斜硬發射",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Aero Pegasus",
+      "weight": "37.9-38.3g",
+      "type": "balance",
+      "tier": "S",
+      "burst": "有間隙，70 高度需注意",
+      "strengths": [
+        "極重全能 blade",
+        "上攻擊+撞擊攻擊皆可",
+        "與 Wizard Rod / Dran Buster 對抗不差"
+      ],
+      "weaknesses": [
+        "有間隙",
+        "耐力依賴發射力道",
+        "上半部重"
+      ],
+      "combos": {
+        "attack": "Aero Pegasus 5-60/9-60/3-60 + Cyclone/Rush/Taper/Point",
+        "stamina": "Aero Pegasus 5-60/3-60/9-60 + Ball/Orb",
+        "defense": "Aero Pegasus 5-70 Hexa"
+      },
+      "note": "攻守兼備，是 S 級中最全能的 blade",
+      "gameplan": "幾乎任何 combo 都適用",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Dran Buster",
+      "weight": "36.5-37.0g",
+      "type": "attack",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "一擊 KO 能力最强",
+        "撞擊力碾壓"
+      ],
+      "weaknesses": [
+        "耐力極低，玻璃大砲",
+        "上半部重，後期易傾倒",
+        "負面反作用力"
+      ],
+      "combos": {
+        "attack": "Dran Buster 1-60/5-60/7-60 + T/LF/P/F/R/LR"
+      },
+      "note": "純攻擊型，需要高 RPM 和強 launch，風險高",
+      "gameplan": "低徑+侵略性 Bit：必須快速結束比賽"
+    },
+    {
+      "name": "Hells Scythe",
+      "weight": "32.7-32.9g",
+      "type": "stamina",
+      "tier": "S+",
+      "burst": null,
+      "strengths": [
+        "頂級耐力+攻擊 combo",
+        "可用於防禦 combo",
+        "高耐力-攻擊 combo 人氣超高"
+      ],
+      "weaknesses": [
+        "發射技術要求高"
+      ],
+      "combos": {
+        "attack": "Hells Scythe + Rush（需技術）",
+        "defense": "Hells Scythe Ball（技術型防禦）",
+        "stamina": "Hells Scythe Needle（人稱 'Siracha' combo）"
+      },
+      "note": "日本超人氣，攻守都能組成 meta combo",
+      "gameplan": "依賴技術，建議有一定經驗再使用"
+    },
+    {
+      "name": "Hells Chain",
+      "weight": "33.2-33.9g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "防禦+耐力混合最佳",
+        "重量級",
+        "KO 抵抗力強"
+      ],
+      "weaknesses": [
+        "比 Hells Scythe 稍遜"
+      ],
+      "combos": {
+        "defense": "Hells Chain 9-60 Orb",
+        "stamina": "Hells Chain + Ball"
+      },
+      "note": "防禦型代表之一",
+      "gameplan": "防禦設定，用耐力拖垮對手"
+    },
+    {
+      "name": "Shark Scale",
+      "weight": "?",
+      "type": "attack",
+      "tier": "S+",
+      "burst": null,
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #1",
+        "搭配 Low Rush / 1-60 攻擊效率高",
+        "三攻擊牌組核心之一"
+      ],
+      "weaknesses": [
+        "公開重量與細節仍需實測補完"
+      ],
+      "combos": {
+        "attack": "Shark Scale 1-60 + Low Rush",
+        "balance": "Shark Scale 9-60 + Rush/Level"
+      },
+      "note": "2026-W18 meta 第一名 blade，攻擊配置優先測試",
+      "gameplan": "低徑 + Low Rush/Rush 強發射，瞄準早期 KO",
+      "matchName": "SharkScale",
+      "metaRank": 1,
+      "system": "BX/CX meta",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Golem Rock",
+      "weight": "34.0-34.4g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "超高防禦",
+        "耐力也不差",
+        "特殊賽制好用"
+      ],
+      "weaknesses": [
+        "重量導致靈活性較低"
+      ],
+      "combos": {
+        "defense": "Golem Rock + Orb / Ball"
+      },
+      "note": "日本 INAZUMA盃特殊賽制熱門",
+      "gameplan": "硬吃撞擊，持久取勝",
+      "source": "BBX Weekly 2026-W18"
+    },
+    {
+      "name": "Cobalt Drake",
+      "weight": "36.8-37.4g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "重量級",
+        "上攻擊能力"
+      ],
+      "weaknesses": [
+        "需要強 launch"
+      ],
+      "combos": {
+        "attack": "Cobalt Drake 5-60/9-60 + Taper/Point"
+      },
+      "note": "Cobalt Dragoon 的前身，性能穩定",
+      "gameplan": "強 launch + 上攻擊"
+    },
+    {
+      "name": "Draciel S",
+      "weight": "28.0-28.2g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "經典型防禦 blade",
+        "穩定性高"
+      ],
+      "weaknesses": [
+        "攻擊力不足"
+      ],
+      "combos": {
+        "defense": "Draciel S + Orb/Hexa"
+      },
+      "note": "經典系列，防禦型入門",
+      "gameplan": "持久戰"
+    },
+    {
+      "name": "Knight Lance",
+      "weight": "32.7-32.9g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "三邊錐形設計",
+        "兼具上攻+撞擊攻擊",
+        "可偏轉對手"
+      ],
+      "weaknesses": [
+        "攻擊力不如頂級",
+        "後期耐力不足"
+      ],
+      "combos": {
+        "attack": "Knight Lance 5-60/9-60 + Rush/Taper"
+      },
+      "note": "三邊錐形攻擊手",
+      "gameplan": "快速進攻"
+    },
+    {
+      "name": "Shark Edge",
+      "weight": "34.0-35.0g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "強力上攻+撞擊",
+        "兩面斜坡鰭設計"
+      ],
+      "weaknesses": [
+        "耐力偏低",
+        "命中不穩定"
+      ],
+      "combos": {
+        "attack": "Shark Edge 5-60/9-60 + Rush/Flat"
+      },
+      "note": "核彈級攻擊手，一擊決勝",
+      "gameplan": "強發射+快速 KO"
+    },
+    {
+      "name": "Leon Claw",
+      "weight": "30.9-31.2g",
+      "type": "defense",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "五邊爪形設計",
+        "傾斜時可攻擊"
+      ],
+      "weaknesses": [
+        "形狀奇特不穩定",
+        "攻防都不頂尖"
+      ],
+      "combos": {
+        "defense": "Leon Claw 5-60 + Ball/Orb"
+      },
+      "note": "獨特傾斜爪機制",
+      "gameplan": "防禦設定為主"
+    },
+    {
+      "name": "Viper Tail",
+      "weight": "34.6-34.9g",
+      "type": "attack",
+      "tier": "A",
+      "burst": "高 Burst 風險",
+      "strengths": [
+        "三邊三角攻擊",
+        "破穩能力極強"
+      ],
+      "weaknesses": [
+        "Recoil Release 問題嚴重",
+        "防禦/耐力 combo 不行"
+      ],
+      "combos": {
+        "attack": "Viper Tail 5-60/9-60 + Rush/Taper"
+      },
+      "note": "純攻擊，破穩專家",
+      "gameplan": "強力 KO"
+    },
+    {
+      "name": "Phoenix Feather",
+      "weight": "31.0-33.4g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "三邊粗糙邊緣",
+        "上攻+撞擊兼具"
+      ],
+      "weaknesses": [
+        "重量浮動大",
+        "穩定性一般"
+      ],
+      "combos": {
+        "attack": "Phoenix Feather 5-60/9-60 + Rush/Flat"
+      },
+      "note": "三邊攻擊手",
+      "gameplan": "侵略性打法"
+    },
+    {
+      "name": "Wyvern Gale",
+      "weight": "31.9-32.2g",
+      "type": "balance",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "四邊光滑銳利",
+        "可破穩對手"
+      ],
+      "weaknesses": [
+        "有縫隙影響表現",
+        "重量偏輕"
+      ],
+      "combos": {
+        "attack": "Wyvern Gale 5-60 + Taper/Point"
+      },
+      "note": "四邊平衡型",
+      "gameplan": "破穩取勝"
+    },
+    {
+      "name": "Dran Dagger",
+      "weight": "34.9-35.7g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "六面攻擊",
+        "連擊型打法",
+        "Dran Sword 變體"
+      ],
+      "weaknesses": [
+        "單次撞擊力不強"
+      ],
+      "combos": {
+        "attack": "Dran Dagger 5-60/9-60 + Rush/Taper"
+      },
+      "note": "六面連擊攻擊手",
+      "gameplan": "密集攻擊"
+    },
+    {
+      "name": "Rhino Horn",
+      "weight": "29.9-33.0g",
+      "type": "attack",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "四點集中攻擊",
+        "開局爆發力強"
+      ],
+      "weaknesses": [
+        "耐力極差，必須速戰",
+        "重量浮動極大"
+      ],
+      "combos": {
+        "attack": "Rhino Horn 5-60/9-60 + Rush/Flat"
+      },
+      "note": "玻璃大砲，開局 KO 型",
+      "gameplan": "必須在前幾秒 KO"
+    },
+    {
+      "name": "Unicorn Sting",
+      "weight": "32.8-33.0g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "兩面不對稱設計",
+        "強撞擊力"
+      ],
+      "weaknesses": [
+        "穩定性不足"
+      ],
+      "combos": {
+        "attack": "Unicorn Sting 5-60/9-60 + Rush/Taper"
+      },
+      "note": "不對稱攻擊手",
+      "gameplan": "強撞擊"
+    },
+    {
+      "name": "Sphinx Cowl",
+      "weight": "32.6-33.1g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "九邊鋸齒設計",
+        "多角度偏轉防禦"
+      ],
+      "weaknesses": [
+        "爆發不穩定"
+      ],
+      "combos": {
+        "defense": "Sphinx Cowl 5-60/9-60 + Ball/Hexa"
+      },
+      "note": "九邊防禦陣列型",
+      "gameplan": "偏轉消耗對手"
+    },
+    {
+      "name": "Dran Sword",
+      "weight": "34.5-35.3g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "三邊銳利設計",
+        "經典攻擊手"
+      ],
+      "weaknesses": [
+        "被新 blade 超越"
+      ],
+      "combos": {
+        "attack": "Dran Sword 5-60/9-60 + Rush/Taper"
+      },
+      "note": "初代攻擊手，經典之作",
+      "gameplan": "標準攻擊"
+    },
+    {
+      "name": "Shinobi Shadow",
+      "weight": "27.9-28.2g",
+      "type": "defense",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "光滑形狀可偏轉"
+      ],
+      "weaknesses": [
+        "極輕，防禦力被抵消"
+      ],
+      "combos": {
+        "defense": "Shinobi Shadow 5-60 + Orb"
+      },
+      "note": "忍者型偏轉防禦，但太輕",
+      "gameplan": "偏轉防禦"
+    },
+    {
+      "name": "Weiss Tiger",
+      "weight": "34.5-34.7g",
+      "type": "balance",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "四邊平衡",
+        "穩定性佳"
+      ],
+      "weaknesses": [
+        "無突出特性"
+      ],
+      "combos": {
+        "attack": "Weiss Tiger 5-60/9-60 + Taper/Point"
+      },
+      "note": "平衡全能型",
+      "gameplan": "靈活應變"
+    },
+    {
+      "name": "Black Shell",
+      "weight": "32.2-33.2g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "八邊龜頭設計",
+        "低高度迴避攻擊"
+      ],
+      "weaknesses": [
+        "攻擊力不足"
+      ],
+      "combos": {
+        "defense": "Black Shell 5-60 + Ball/Hexa"
+      },
+      "note": "龜殼防禦，低高度迴避專家",
+      "gameplan": "低高度防禦"
+    },
+    {
+      "name": "Phoenix Rudder",
+      "weight": "34.4-34.8g",
+      "type": "stamina",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "六邊反錐形",
+        "Glide bit 搭配站立消耗"
+      ],
+      "weaknesses": [
+        "耐力戰掙扎"
+      ],
+      "combos": {
+        "stamina": "Phoenix Rudder 5-60 + Glide"
+      },
+      "note": "反錐形站立型耐力手",
+      "gameplan": "站立消耗對手"
+    },
+    {
+      "name": "Leon Crest",
+      "weight": "34.7-35.2g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "七邊垂直突起",
+        "牆壁般防禦"
+      ],
+      "weaknesses": [
+        "耐力不如 Wizard Rod"
+      ],
+      "combos": {
+        "defense": "Leon Crest 5-60/9-60 + Hexa/Ball"
+      },
+      "note": "牆壁防禦型",
+      "gameplan": "硬吃撞擊"
+    },
+    {
+      "name": "Whale Wave",
+      "weight": "38.0-38.3g",
+      "type": "defense",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "超重防禦",
+        "四邊波浪設計"
+      ],
+      "weaknesses": [
+        "靈活性低"
+      ],
+      "combos": {
+        "defense": "Whale Wave 5-60/9-60 + Ball/Hexa"
+      },
+      "note": "最重防禦 blade 之一",
+      "gameplan": "重量壓制"
+    },
+    {
+      "name": "Lightning L-Drago Rapid Hit",
+      "weight": "32.5-33.4g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "左旋反轉",
+        "連續撞擊"
+      ],
+      "weaknesses": [
+        "需要強 launch",
+        "需要適應左旋"
+      ],
+      "combos": {
+        "attack": "L-Drago RH 5-60/9-60 + Rush/Taper"
+      },
+      "note": "左旋連擊型攻擊手",
+      "gameplan": "強力左旋發射"
+    },
+    {
+      "name": "Lightning L-Drago Upper",
+      "weight": "33.0-34.0g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "左旋反轉",
+        "上攻擊能力"
+      ],
+      "weaknesses": [
+        "需要極強 launch"
+      ],
+      "combos": {
+        "attack": "L-Drago Upper 5-60/9-60 + Rush/Flat"
+      },
+      "note": "左旋上攻擊型",
+      "gameplan": "強力左旋 + 上攻擊"
+    },
+    {
+      "name": "Bear Scratch",
+      "weight": "29.6-29.9g",
+      "type": "attack",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "四點尖銳攻擊",
+        "開局爆發"
+      ],
+      "weaknesses": [
+        "極輕無耐力",
+        "必須速戰"
+      ],
+      "combos": {
+        "attack": "Bear Scratch 5-60 + Rush/Flat"
+      },
+      "note": "熊爪開局爆發型",
+      "gameplan": "前幾秒 KO"
+    },
+    {
+      "name": "Mammoth Tusk",
+      "weight": "31.9-32.2g",
+      "type": "defense",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "四邊象牙突起"
+      ],
+      "weaknesses": [
+        "防禦力不頂尖"
+      ],
+      "combos": {
+        "defense": "Mammoth Tusk 5-60 + Ball/Orb"
+      },
+      "note": "象牙防禦型",
+      "gameplan": "標準防禦"
+    },
+    {
+      "name": "Shinobi Knife",
+      "weight": "30.6-30.8g",
+      "type": "attack",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "三邊刀刃設計"
+      ],
+      "weaknesses": [
+        "偏輕",
+        "穩定性不足"
+      ],
+      "combos": {
+        "attack": "Shinobi Knife 5-60 + Taper/Rush"
+      },
+      "note": "忍者刀攻擊型",
+      "gameplan": "快速切入"
+    },
+    {
+      "name": "Ptera Swing",
+      "weight": "34.2-34.5g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "三邊三角光滑",
+        "Viper Tail 變體但更光滑"
+      ],
+      "weaknesses": [
+        "有縫隙"
+      ],
+      "combos": {
+        "attack": "Ptera Swing 5-60/9-60 + Rush/Taper"
+      },
+      "note": "Viper Tail 的改良版",
+      "gameplan": "強力攻擊"
+    },
+    {
+      "name": "Knight Mail",
+      "weight": "36.4-36.9g",
+      "type": "defense",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "圓形緊湊",
+        "3 顆移動金屬球",
+        "偏轉+攻擊兼具"
+      ],
+      "weaknesses": [
+        "新零件，資料較少"
+      ],
+      "combos": {
+        "defense": "Knight Mail 5-60/9-60 + Hexa/Ball"
+      },
+      "note": "移動金屬球機制，攻防一體",
+      "gameplan": "偏轉防禦+反擊"
+    },
+    {
+      "name": "Samurai Saber",
+      "weight": "36.2-36.5g",
+      "type": "attack",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "雙模式切換",
+        "連擊→一擊必殺",
+        "重量級"
+      ],
+      "weaknesses": [
+        "需要技術掌握模式切換"
+      ],
+      "combos": {
+        "attack": "Samurai Saber 5-60/9-60 + Rush/Taper"
+      },
+      "note": "雙模式攻擊手，金屬翼展開/收回",
+      "gameplan": "開局連擊，後期必殺"
+    },
+    {
+      "name": "Impact Drake",
+      "weight": "38.5-39.2g",
+      "type": "attack",
+      "tier": "S",
+      "burst": null,
+      "strengths": [
+        "最重攻擊 blade",
+        "橡膠接觸點",
+        "毀滅性撞擊"
+      ],
+      "weaknesses": [
+        "耐力極差",
+        "高反作用力"
+      ],
+      "combos": {
+        "attack": "Impact Drake 1-60/5-60 + Taper/Rush"
+      },
+      "note": "最重攻擊手，純暴力 KO",
+      "gameplan": "一擊 KO，速戰速決"
+    },
+    {
+      "name": "Ghost Circle",
+      "weight": "26.5-26.7g",
+      "type": "stamina",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "完美圓形",
+        "低阻力"
+      ],
+      "weaknesses": [
+        "極輕",
+        "攻擊力幾乎為零"
+      ],
+      "combos": {
+        "stamina": "Ghost Circle 5-60/9-60 + Ball/Needle"
+      },
+      "note": "圓形耐力型，純轉圈",
+      "gameplan": "純耐力取勝"
+    },
+    {
+      "name": "Shelter Drake",
+      "weight": "32.2-32.5g",
+      "type": "defense",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "四邊護盾設計"
+      ],
+      "weaknesses": [
+        "被新 blade 超越"
+      ],
+      "combos": {
+        "defense": "Shelter Drake 5-60 + Orb/Ball"
+      },
+      "note": "護盾防禦型",
+      "gameplan": "標準防禦"
+    },
+    {
+      "name": "Crimson Garuda",
+      "weight": "34.7-35.2g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "三邊翼形",
+        "攻擊力佳"
+      ],
+      "weaknesses": [
+        "穩定性一般"
+      ],
+      "combos": {
+        "attack": "Crimson Garuda 5-60/9-60 + Rush/Taper"
+      },
+      "note": "翼形攻擊手",
+      "gameplan": "侵略性打法"
+    },
+    {
+      "name": "Croc Crunch",
+      "weight": "32.6-33.0g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "Shark Edge 變體",
+        "上攻+撞擊"
+      ],
+      "weaknesses": [
+        "比 Shark Edge 稍弱"
+      ],
+      "combos": {
+        "attack": "Croc Crunch 5-60/9-60 + Rush/Taper"
+      },
+      "note": "鱷魚咬型，Shark Edge 變體",
+      "gameplan": "強力 KO"
+    },
+    {
+      "name": "Xeno Xcalibur",
+      "weight": "30.8-31.0g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "銳利橢圓形",
+        "大接觸點"
+      ],
+      "weaknesses": [
+        "玻璃大砲",
+        "耐力低"
+      ],
+      "combos": {
+        "attack": "Xeno Xcalibur 5-60/1-60 + Rush/Taper"
+      },
+      "note": "銳利橢圓攻擊手，一擊決勝",
+      "gameplan": "強發射 KO"
+    },
+    {
+      "name": "Hells Hammer",
+      "weight": "32.8-33.2g",
+      "type": "attack",
+      "tier": "A",
+      "burst": null,
+      "strengths": [
+        "兩面錘形設計"
+      ],
+      "weaknesses": [
+        "攻擊力不如頂級"
+      ],
+      "combos": {
+        "attack": "Hells Hammer 5-60/9-60 + Rush/Taper"
+      },
+      "note": "錘形攻擊手",
+      "gameplan": "撞擊攻擊"
+    },
+    {
+      "name": "Dranzer S",
+      "weight": "27.2-27.5g",
+      "type": "attack",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "經典系列",
+        "螺旋設計"
+      ],
+      "weaknesses": [
+        "極輕",
+        "性能不如現代 blade"
+      ],
+      "combos": {
+        "attack": "Dranzer S 5-60 + Rush/Taper"
+      },
+      "note": "經典紀念 blade",
+      "gameplan": "收藏/入門"
+    },
+    {
+      "name": "Driger S",
+      "weight": "28.2-28.5g",
+      "type": "attack",
+      "tier": "B",
+      "burst": null,
+      "strengths": [
+        "經典系列"
+      ],
+      "weaknesses": [
+        "極輕"
+      ],
+      "combos": {
+        "attack": "Driger S 5-60 + Rush/Taper"
+      },
+      "note": "經典紀念 blade",
+      "gameplan": "收藏/入門"
+    },
+    {
+      "name": "Meteor Dragoon",
+      "weight": "?",
+      "type": "attack",
+      "tier": "S",
+      "metaRank": 4,
+      "system": "CX",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #4",
+        "左旋/攻擊向 meta 新選項",
+        "可和低徑攻擊 bit 搭配"
+      ],
+      "weaknesses": [
+        "新零件資料仍在累積",
+        "需要本地測試確認穩定性"
+      ],
+      "combos": {
+        "attack": "Meteor Dragoon 1-60/9-60 + Low Rush/Rush",
+        "balance": "Meteor Dragoon 9-60 + Point/Level"
+      },
+      "note": "2026-W18 新進前段 meta，建議列入攻擊測試池",
+      "gameplan": "低徑攻擊，優先測 Low Rush/Rush 與 9-60 穩定版"
+    },
+    {
+      "name": "Wyvern Hover",
+      "weight": "?",
+      "type": "stamina",
+      "tier": "S",
+      "metaRank": 5,
+      "system": "CX",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #5",
+        "新耐力/平衡向選擇",
+        "可搭 Free Ball / Hexa 測試"
+      ],
+      "weaknesses": [
+        "公開 combo 樣本仍有限"
+      ],
+      "combos": {
+        "stamina": "Wyvern Hover 9-60 + Free Ball/Ball",
+        "defense": "Wyvern Hover 9-60/5-60 + Hexa"
+      },
+      "note": "2026-W18 前段新 meta blade，偏耐力與防守測試",
+      "gameplan": "穩定發射，先以 9-60 + Free Ball/Hexa 做基準"
+    },
+    {
+      "name": "Rage",
+      "weight": "?",
+      "type": "balance",
+      "tier": "S",
+      "metaRank": 6,
+      "system": "CX Main/Over",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #6",
+        "可與 Flow / Heavy 組成競技 CX 配置",
+        "攻守彈性高"
+      ],
+      "weaknesses": [
+        "CX 部件拆分需要更細資料模型"
+      ],
+      "combos": {
+        "balance": "Rage Flow Heavy 9-60 + Kick",
+        "attack": "Rage Flow Heavy 1-60 + Low Rush"
+      },
+      "note": "CX meta 新核心之一，現階段以 Rage/Flow/Heavy 整組記錄",
+      "gameplan": "先用 Kick 平衡版建立穩定度，再測低徑攻擊版"
+    },
+    {
+      "name": "Blitz",
+      "weight": "?",
+      "type": "attack",
+      "tier": "S",
+      "metaRank": 7,
+      "system": "CX",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #7",
+        "新攻擊向 meta 件",
+        "可與低徑 Rush 系列搭配"
+      ],
+      "weaknesses": [
+        "需要更多對局樣本"
+      ],
+      "combos": {
+        "attack": "Blitz 1-60/1-50 + Low Rush/Rush"
+      },
+      "note": "2026-W18 新進攻擊候選",
+      "gameplan": "低徑高轉速攻擊，避免拖入耐力戰"
+    },
+    {
+      "name": "Blast",
+      "weight": "?",
+      "type": "attack",
+      "tier": "S",
+      "metaRank": 11,
+      "system": "CX",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "4月 meta 回升，與 1-50 相性被提及",
+        "爆發攻擊潛力高"
+      ],
+      "weaknesses": [
+        "需要精準調整高度與 bit"
+      ],
+      "combos": {
+        "attack": "Blast 1-50 + Level/Low Rush",
+        "balance": "Blast 1-50 + Kick"
+      },
+      "note": "BBX Weekly 2026-04 提到 1-50 讓 Blast 回升",
+      "gameplan": "用 1-50 降低重心，測 Level / Low Rush / Kick"
+    },
+    {
+      "name": "Scorpio Spear",
+      "weight": "?",
+      "type": "attack",
+      "tier": "A",
+      "metaRank": 14,
+      "system": "CX",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #14",
+        "新攻擊候選"
+      ],
+      "weaknesses": [
+        "排名較後，需更多本地驗證"
+      ],
+      "combos": {
+        "attack": "Scorpio Spear 1-60/9-60 + Rush/Low Rush"
+      },
+      "note": "新 meta 候選，先列入測試清單",
+      "gameplan": "低徑攻擊，觀察 KO 穩定率"
+    },
+    {
+      "name": "Clock Mirage",
+      "weight": "?",
+      "type": "balance",
+      "tier": "A",
+      "metaRank": 15,
+      "system": "CX",
+      "source": "BBX Weekly 2026-W18",
+      "strengths": [
+        "BBX Weekly 2026-W18 Blade #15",
+        "平衡向測試件"
+      ],
+      "weaknesses": [
+        "目前前段排名壓力較大"
+      ],
+      "combos": {
+        "balance": "Clock Mirage 9-60 + Kick/Point",
+        "defense": "Clock Mirage 9-60 + Hexa"
+      },
+      "note": "新平衡候選，適合做防守/平衡測試",
+      "gameplan": "以 9-60 + Kick/Hexa 測穩定度"
+    },
+    {
+      "name": "Dran Strike",
+      "weight": "?",
+      "type": "attack",
+      "tier": "A",
+      "system": "BX",
+      "source": "BeyBase 2026-05-18",
+      "strengths": [
+        "2026-05-16 新發售",
+        "Stock 4-50 + Free Flat 提供新低徑攻擊素材",
+        "Dran 系攻擊手新選項"
+      ],
+      "weaknesses": [
+        "上市初期，競技樣本不足"
+      ],
+      "combos": {
+        "attack": "Dran Strike 4-50 + Free Flat",
+        "balance": "Dran Strike 1-60/4-50 + Low Rush/Rush"
+      },
+      "note": "BX-49 新品，先以 stock 與 Low Rush/Rush 變體測試",
+      "gameplan": "Free Flat 測 Xtreme Dash 控制；再換 Low Rush/Rush 看穩定 KO"
+    }
+  ],
+  "ratchets": [
+    {
+      "id": "1-60",
+      "sides": 1,
+      "height": "低",
+      "weight": "6.1g",
+      "type": "攻擊",
+      "note": "單點撞擊，純攻擊"
+    },
+    {
+      "id": "1-80",
+      "sides": 1,
+      "height": "高",
+      "weight": "6.5g",
+      "type": "攻擊",
+      "note": "高重心攻擊版"
+    },
+    {
+      "id": "2-60",
+      "sides": 2,
+      "height": "低",
+      "weight": "6.2g",
+      "type": "平衡",
+      "note": "基礎平衡"
+    },
+    {
+      "id": "2-70",
+      "sides": 2,
+      "height": "中",
+      "weight": "?",
+      "type": "平衡",
+      "note": ""
+    },
+    {
+      "id": "2-80",
+      "sides": 2,
+      "height": "高",
+      "weight": "6.9g",
+      "type": "平衡",
+      "note": ""
+    },
+    {
+      "id": "3-60",
+      "sides": 3,
+      "height": "低",
+      "weight": "6.3-6.4g",
+      "type": "平衡",
+      "note": "低重心，攻/耐力皆可，但 4-60 更優"
+    },
+    {
+      "id": "3-70",
+      "sides": 3,
+      "height": "中",
+      "weight": "6.4g",
+      "type": "平衡",
+      "note": ""
+    },
+    {
+      "id": "3-80",
+      "sides": 3,
+      "height": "高",
+      "weight": "7.1g",
+      "type": "耐力",
+      "note": "高徑耐力型"
+    },
+    {
+      "id": "3-85",
+      "sides": 3,
+      "height": "超高",
+      "weight": "?",
+      "type": "耐力",
+      "note": "特殊用途"
+    },
+    {
+      "id": "4-55",
+      "sides": 4,
+      "height": "超低",
+      "weight": "?",
+      "type": "攻擊",
+      "note": "超低攻擊特化"
+    },
+    {
+      "id": "4-60",
+      "sides": 4,
+      "height": "低",
+      "weight": "6.4g",
+      "type": "平衡",
+      "note": "基礎低徑平衡，多面接觸"
+    },
+    {
+      "id": "4-70",
+      "sides": 4,
+      "height": "中",
+      "weight": "6.5g",
+      "type": "平衡",
+      "note": ""
+    },
+    {
+      "id": "4-80",
+      "sides": 4,
+      "height": "高",
+      "weight": "7.0g",
+      "type": "耐力",
+      "note": ""
+    },
+    {
+      "id": "5-60",
+      "sides": 5,
+      "height": "低",
+      "weight": "6.6g",
+      "type": "防守",
+      "note": "★最受歡迎低徑，防+耐力首選"
+    },
+    {
+      "id": "5-70",
+      "sides": 5,
+      "height": "中",
+      "weight": "6.7g",
+      "type": "防守",
+      "note": ""
+    },
+    {
+      "id": "5-80",
+      "sides": 5,
+      "height": "高",
+      "weight": "7.2g",
+      "type": "耐力",
+      "note": ""
+    },
+    {
+      "id": "6-60",
+      "sides": 6,
+      "height": "低",
+      "weight": "?",
+      "type": "平衡",
+      "note": ""
+    },
+    {
+      "id": "6-80",
+      "sides": 6,
+      "height": "高",
+      "weight": "?",
+      "type": "耐力",
+      "note": ""
+    },
+    {
+      "id": "7-60",
+      "sides": 7,
+      "height": "低",
+      "weight": "?",
+      "type": "平衡",
+      "note": ""
+    },
+    {
+      "id": "7-70",
+      "sides": 7,
+      "height": "中",
+      "weight": "?",
+      "type": "耐力",
+      "note": ""
+    },
+    {
+      "id": "7-80",
+      "sides": 7,
+      "height": "高",
+      "weight": "?",
+      "type": "耐力",
+      "note": ""
+    },
+    {
+      "id": "9-60",
+      "sides": 9,
+      "height": "低",
+      "weight": "6.2g",
+      "type": "防守",
+      "note": "★最佳低徑，爆發耐力一體"
+    },
+    {
+      "id": "9-70",
+      "sides": 9,
+      "height": "中",
+      "weight": "?",
+      "type": "防守",
+      "note": ""
+    },
+    {
+      "id": "9-80",
+      "sides": 9,
+      "height": "高",
+      "weight": "6.8g",
+      "type": "防守",
+      "note": ""
+    },
+    {
+      "id": "0-80",
+      "sides": "?",
+      "height": "高",
+      "weight": "?",
+      "type": "特殊",
+      "note": "特殊用途"
+    },
+    {
+      "id": "1-50",
+      "sides": 1,
+      "height": "超低",
+      "weight": "?",
+      "type": "攻擊",
+      "note": "BBX Weekly 2026-W18 #4；低重心 CX/攻擊測試核心"
+    },
+    {
+      "id": "1-70",
+      "sides": 1,
+      "height": "中",
+      "weight": "?",
+      "type": "攻擊",
+      "note": "BBX Weekly 2026-W18 #6；單點中高度攻擊選項"
+    },
+    {
+      "id": "4-50",
+      "sides": 4,
+      "height": "超低",
+      "weight": "?",
+      "type": "攻擊",
+      "note": "Dran Strike stock；超低 50 高度，攻擊/重心調整用"
+    }
+  ],
+  "bits": [
+    {
+      "name": "Rush",
+      "abbr": "R",
+      "weight": "2.1g",
+      "burst": 80,
+      "type": "攻擊",
+      "note": "Xtreme Line專用，最穩定"
+    },
+    {
+      "name": "Low Rush",
+      "abbr": "LR",
+      "weight": "1.9g",
+      "burst": 80,
+      "type": "攻擊",
+      "note": "Rush短版，攻擊更集中"
+    },
+    {
+      "name": "Ball",
+      "abbr": "B",
+      "weight": "2.1g",
+      "burst": 20,
+      "type": "耐力",
+      "note": "純耐力王"
+    },
+    {
+      "name": "Free Ball",
+      "abbr": "FB",
+      "weight": "2.0g",
+      "burst": 20,
+      "type": "耐力",
+      "note": "Ball旋轉版，帶防禦"
+    },
+    {
+      "name": "Orb",
+      "abbr": "O",
+      "weight": "?",
+      "burst": 20,
+      "type": "防禦",
+      "note": "圓弧穩定型"
+    },
+    {
+      "name": "Under Needle",
+      "abbr": "UN",
+      "weight": "1.8g",
+      "burst": 20,
+      "type": "防禦",
+      "note": "坦克針地，防+耐力"
+    },
+    {
+      "name": "Needle",
+      "abbr": "N",
+      "weight": "2.0g",
+      "burst": "?",
+      "type": "防禦",
+      "note": "防守針形"
+    },
+    {
+      "name": "High Needle",
+      "abbr": "HN",
+      "weight": "2.2g",
+      "burst": "?",
+      "type": "防禦",
+      "note": "高徑防禦"
+    },
+    {
+      "name": "Hexa",
+      "abbr": "H",
+      "weight": "2.6g",
+      "burst": 80,
+      "type": "防禦",
+      "note": "★防守+耐力，六角齒輪"
+    },
+    {
+      "name": "Level",
+      "abbr": "L",
+      "weight": "2.6g",
+      "burst": 80,
+      "type": "平衡",
+      "note": "Xtreme Dash，攻守兩用"
+    },
+    {
+      "name": "Elevate",
+      "abbr": "E",
+      "weight": "3.2g",
+      "burst": "低",
+      "type": "平衡",
+      "note": "曲線移動，KO潛力高"
+    },
+    {
+      "name": "Taper",
+      "abbr": "T",
+      "weight": "2.2g",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "錐形，KO能力強"
+    },
+    {
+      "name": "Flat",
+      "abbr": "F",
+      "weight": "2.3g",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "平面接觸"
+    },
+    {
+      "name": "Point",
+      "abbr": "P",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "尖銳，高爆發"
+    },
+    {
+      "name": "Spike",
+      "abbr": "S",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "尖刺"
+    },
+    {
+      "name": "Accel",
+      "abbr": "A",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "加速型"
+    },
+    {
+      "name": "Gear Flat",
+      "abbr": "GF",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "齒輪平面"
+    },
+    {
+      "name": "Gear Point",
+      "abbr": "GP",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "齒輪尖點"
+    },
+    {
+      "name": "Gear Ball",
+      "abbr": "GB",
+      "weight": "?",
+      "burst": "?",
+      "type": "耐力",
+      "note": "齒輪球底"
+    },
+    {
+      "name": "Gear Needle",
+      "abbr": "GN",
+      "weight": "?",
+      "burst": "?",
+      "type": "防禦",
+      "note": "齒輪針形"
+    },
+    {
+      "name": "Cyclone",
+      "abbr": "C",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "旋風節奏"
+    },
+    {
+      "name": "Glide",
+      "abbr": "G",
+      "weight": "?",
+      "burst": "?",
+      "type": "耐力",
+      "note": "滑行耐力型"
+    },
+    {
+      "name": "Disc Ball",
+      "abbr": "DB",
+      "weight": "?",
+      "burst": "?",
+      "type": "耐力",
+      "note": "圓盤+球底"
+    },
+    {
+      "name": "Low Flat",
+      "abbr": "LF",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "低徑平面"
+    },
+    {
+      "name": "Wedge",
+      "abbr": "W",
+      "weight": "?",
+      "burst": "?",
+      "type": "防禦",
+      "note": "楔形防禦"
+    },
+    {
+      "name": "Metal Needle",
+      "abbr": "MN",
+      "weight": "?",
+      "burst": "?",
+      "type": "防禦",
+      "note": "金屬針"
+    },
+    {
+      "name": "Unite",
+      "abbr": "U",
+      "weight": "?",
+      "burst": "?",
+      "type": "平衡",
+      "note": "統一型"
+    },
+    {
+      "name": "Quake",
+      "abbr": "Q",
+      "weight": "?",
+      "burst": "?",
+      "type": "防禦",
+      "note": "震動型"
+    },
+    {
+      "name": "Vortex",
+      "abbr": "V",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "漩渦型"
+    },
+    {
+      "name": "Rubber Accel",
+      "abbr": "RA",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "橡膠加速"
+    },
+    {
+      "name": "Kick",
+      "abbr": "K",
+      "weight": "?",
+      "burst": "?",
+      "type": "平衡",
+      "note": "BBX Weekly 2026-W18 Bit #6；CX 平衡配置常見"
+    },
+    {
+      "name": "Jolt",
+      "abbr": "J",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "BBX Weekly 2026-W18 Bit #9；攻擊測試候選"
+    },
+    {
+      "name": "Low Orb",
+      "abbr": "LO",
+      "weight": "?",
+      "burst": "?",
+      "type": "耐力",
+      "note": "BBX Weekly 2026-W18 Bit #12；低版 Orb，耐力/防禦測試"
+    },
+    {
+      "name": "Free Flat",
+      "abbr": "FF",
+      "weight": "?",
+      "burst": "?",
+      "type": "攻擊",
+      "note": "Dran Strike stock；Free 系平面攻擊 bit"
+    },
+    {
+      "name": "Trans Point",
+      "abbr": "TP",
+      "weight": "?",
+      "burst": "?",
+      "type": "平衡",
+      "note": "Crimson Garuda stock；Point 變體，可切換高低模式"
+    },
+    {
+      "name": "High Taper",
+      "abbr": "HT",
+      "weight": "?",
+      "burst": "?",
+      "type": "平衡",
+      "note": "Taper 高版，部分舊 release/parts list 有收錄"
+    },
+    {
+      "name": "Dot",
+      "abbr": "D",
+      "weight": "?",
+      "burst": "?",
+      "type": "防禦",
+      "note": "防禦/穩定向 bit，補齊 beybxdb parts list"
+    },
+    {
+      "name": "Bound Spike",
+      "abbr": "BS",
+      "weight": "?",
+      "burst": "?",
+      "type": "防禦",
+      "note": "彈性 Spike 變體，補齊 beybxdb parts list"
+    }
+  ]
+}

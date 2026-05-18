@@ -10,6 +10,10 @@ on:
     paths:
       - 'events.json'
       - 'scraper.py'
+      - 'blades.html'
+      - 'parts.json'
+      - 'combos.json'
+      - 'README.md'
 
 concurrency:
   group: pages-deploy

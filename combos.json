@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-05-19",
+    "dataThrough": "2026-05",
+    "sources": [
+      {
+        "name": "beybxdb Release List / Parts",
+        "url": "https://www.beybxdb.com/beyblade-product-list/release-list"
+      },
+      {
+        "name": "BeyBase Buyer Guide",
+        "url": "https://beybase.com/beyblade-x-buyers-guide-best-combos/"
+      },
+      {
+        "name": "BBX Weekly 2026-W18",
+        "url": "https://www.bbxweekly.com/"
+      }
+    ]
+  },
+  "combos": [
+    {
+      "name": "純攻擊 - 速戰速決",
+      "type": "attack",
+      "parts": [
+        "Phoenix Wing",
+        "1-60",
+        "Low Rush"
+      ],
+      "note": "爆發力最强，低徑 Xtreme Dash"
+    },
+    {
+      "name": "純攻擊 - 大砲型",
+      "type": "attack",
+      "parts": [
+        "Dran Buster",
+        "1-60",
+        "Taper/LF"
+      ],
+      "note": "一擊脫離，需要強 launch"
+    },
+    {
+      "name": "攻擊 - 穩定型",
+      "type": "attack",
+      "parts": [
+        "Cobalt Dragoon",
+        "5-60",
+        "Point"
+      ],
+      "note": "重量級 KO，比 Phoenix 需更高技術"
+    },
+    {
+      "name": "耐力 - 標準版",
+      "type": "stamina",
+      "parts": [
+        "Wizard Rod",
+        "3-60",
+        "Ball"
+      ],
+      "note": "Gold Standard，純耐力"
+    },
+    {
+      "name": "耐力 - 防守耐力",
+      "type": "stamina",
+      "parts": [
+        "Wizard Rod",
+        "5-60",
+        "Ball"
+      ],
+      "note": "更穩定，比 3-60 更好防禦"
+    },
+    {
+      "name": "耐力 - 重型版",
+      "type": "stamina",
+      "parts": [
+        "Cobalt Dragoon",
+        "5-60",
+        "Glide"
+      ],
+      "note": "重量級耐力"
+    },
+    {
+      "name": "防禦 - 坦克版",
+      "type": "defense",
+      "parts": [
+        "Silver Wolf",
+        "9-60",
+        "Under Needle"
+      ],
+      "note": "針地坦克，KO抵抗力極强"
+    },
+    {
+      "name": "防禦 - Hexa版",
+      "type": "defense",
+      "parts": [
+        "Wizard Rod",
+        "5-70",
+        "Hexa"
+      ],
+      "note": "傾斜發射後幾乎不敗"
+    },
+    {
+      "name": "防禦 - 頂級版",
+      "type": "defense",
+      "parts": [
+        "Tyranno Beat",
+        "3-60",
+        "Hexa"
+      ],
+      "note": "第二好的 Hexa blade"
+    },
+    {
+      "name": "平衡 - 萬用型",
+      "type": "balance",
+      "parts": [
+        "Aero Pegasus",
+        "7-60",
+        "Level"
+      ],
+      "note": "平衡全能，適應性廣"
+    },
+    {
+      "name": "平衡 - 曲線KO型",
+      "type": "balance",
+      "parts": [
+        "Wizard Rod",
+        "5-60",
+        "Elevate"
+      ],
+      "note": "Elevate 曲線獨特，可有意外 KO"
+    },
+    {
+      "name": "NorCal Special",
+      "type": "stamina",
+      "parts": [
+        "Wizard Rod",
+        "3-60",
+        "Ball"
+      ],
+      "note": "美國北加州冠軍配置"
+    },
+    {
+      "name": "Meta 2026-W18 - Shark Scale LR",
+      "type": "attack",
+      "parts": [
+        "Shark Scale",
+        "1-60",
+        "Low Rush"
+      ],
+      "note": "BBX Weekly：Blade #1 + Bit #1，快速 KO 基準配置"
+    },
+    {
+      "name": "Meta 2026-W18 - Wizard Rod Hexa",
+      "type": "defense",
+      "parts": [
+        "Wizard Rod",
+        "9-60",
+        "Hexa"
+      ],
+      "note": "Wizard Rod 仍在前段，Hexa 為 Bit #2，穩定防守耐力"
+    },
+    {
+      "name": "Meta 2026-W18 - Aero Pegasus Level",
+      "type": "balance",
+      "parts": [
+        "Aero Pegasus",
+        "1-60",
+        "Level"
+      ],
+      "note": "Aero Pegasus 排名前段，Level 維持高使用率"
+    },
+    {
+      "name": "CX測試 - Meteor Dragoon LR",
+      "type": "attack",
+      "parts": [
+        "Meteor Dragoon",
+        "1-60",
+        "Low Rush"
+      ],
+      "note": "新進前段 meta，先以低徑 Rush 系測 KO"
+    },
+    {
+      "name": "CX測試 - Wyvern Hover FB",
+      "type": "stamina",
+      "parts": [
+        "Wyvern Hover",
+        "9-60",
+        "Free Ball"
+      ],
+      "note": "Wyvern Hover 前段 meta，Free Ball 為 2026-W18 前段 bit"
+    },
+    {
+      "name": "CX測試 - Rage Flow Heavy",
+      "type": "balance",
+      "parts": [
+        "Rage/Flow/Heavy",
+        "9-60",
+        "Kick"
+      ],
+      "note": "CX 新 meta 組合，Kick 平衡版優先測穩定"
+    },
+    {
+      "name": "CX測試 - Blast 1-50",
+      "type": "attack",
+      "parts": [
+        "Blast",
+        "1-50",
+        "Level/Low Rush"
+      ],
+      "note": "BBX Weekly 4月指出 1-50 讓 Blast 回升"
+    },
+    {
+      "name": "新品測試 - Dran Strike stock",
+      "type": "attack",
+      "parts": [
+        "Dran Strike",
+        "4-50",
+        "Free Flat"
+      ],
+      "note": "BX-49 2026-05-16 stock，新低徑攻擊素材"
+    }
+  ]
+}

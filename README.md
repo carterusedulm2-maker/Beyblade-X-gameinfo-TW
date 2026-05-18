@@ -11,6 +11,7 @@
 - ⏰ 每日自動檢查更新（GitHub Actions）
 - 🧭 自動從索引頁與搜尋結果發現每兩個月新增的 G3/B4 Google Sheets
 - 🧹 自動移除已過期賽事，列表只保留今天與未來場次
+- ⚔️ 零件與 Combo 攻略頁改讀 `parts.json` / `combos.json`，方便獨立更新 meta 資料
 
 ## 資料來源
 
