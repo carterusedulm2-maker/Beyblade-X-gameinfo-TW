@@ -59,7 +59,6 @@ header p{color:var(--muted);font-size:.85rem}
     <option value="cap-desc">名額 多→少</option>
     <option value="cap-asc">名額 少→多</option>
   </select>
-  <label><input type="checkbox" id="hideExpired"> 隱藏已結束</label>
   <button onclick="resetFilters()">重置</button>
 </div>
 <div class="stats" id="stats"></div>
@@ -67,7 +66,6 @@ header p{color:var(--muted);font-size:.85rem}
 
 <script>
 let DATA=null;
-const today=new Date().toISOString().slice(0,10);
 
 async function init(){
   try{
@@ -91,7 +89,6 @@ function buildFilters(){
   fillSelect('filterCat',cats);
   ['filterCity','filterReg','filterCat','sortBy'].forEach(id=>
     document.getElementById(id).addEventListener('change',render));
-  document.getElementById('hideExpired').addEventListener('change',render);
 }
 
 function fillSelect(id,opts){
@@ -104,13 +101,11 @@ function render(){
   const reg=document.getElementById('filterReg').value;
   const cat=document.getElementById('filterCat').value;
   const sort=document.getElementById('sortBy').value;
-  const hideExp=document.getElementById('hideExpired').checked;
 
   let events=DATA.events.filter(e=>{
     if(city&&e.city!==city)return false;
     if(reg&&e.registrationMethod!==reg)return false;
     if(cat&&e.category!==cat)return false;
-    if(hideExp&&e.date<today)return false;
     return true;
   });
 
@@ -128,9 +123,8 @@ function render(){
   if(!events.length){list.innerHTML='<div class="no-data">沒有符合條件的比賽</div>';return}
 
   list.innerHTML=events.map(e=>{
-    const expired=e.date<today;
     const catClass=(e.category||'').includes('公開')?'open':'normal';
-    return `<div class="card${expired?' expired':''}">
+    return `<div class="card">
       <div class="card-header">
         <span class="store-name">${esc(e.storeName)}</span>
         <div class="tags">
@@ -156,7 +150,6 @@ function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').
 function resetFilters(){
   ['filterCity','filterReg','filterCat'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('sortBy').value='date-desc';
-  document.getElementById('hideExpired').checked=false;
   render();
 }
 

@@ -9,6 +9,8 @@
 - ↕️ 按日期、名額排序
 - 📱 手機友善 RWD
 - ⏰ 每日自動檢查更新（GitHub Actions）
+- 🧭 自動從索引頁與搜尋結果發現每兩個月新增的 G3/B4 Google Sheets
+- 🧹 自動移除已過期賽事，列表只保留今天與未來場次
 
 ## 資料來源
 
@@ -25,4 +27,5 @@ python3 -m http.server 8000 # 啟動本地伺服器
 
 ## 部署
 
-GitHub Pages 自動部署，每天自動檢查資料來源並更新資料。
+GitHub Pages 自動部署，每天自動檢查資料來源並更新資料。爬蟲會先讀 HackMD 索引頁，
+再用搜尋結果作為備援來源尋找新一期 G3/B4 Google Sheets。

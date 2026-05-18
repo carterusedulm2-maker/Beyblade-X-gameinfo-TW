@@ -13,15 +13,22 @@
 import csv
 import io
 import json
+import os
 import re
 import sys
+import time
+import urllib.parse
 import urllib.request
-from datetime import datetime, date
+from datetime import datetime, date, timedelta, timezone
 from collections import Counter
 
 
 HACKMD_URL = "https://hackmd.io/@liangyutw/beyblade-important-record"
 SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+GOOGLE_CSE_URL = "https://www.googleapis.com/customsearch/v1"
+GOOGLE_SEARCH_HTML_URL = "https://www.google.com/search"
+BING_SEARCH_HTML_URL = "https://www.bing.com/search"
+TAIPEI_TZ = timezone(timedelta(hours=8))
 
 # 已知有效的直接連結（當 HackMD URL 抓不到或抓到少於預期時使用）
 # 格式：period -> {source_name: sheet_id}
@@ -66,6 +73,10 @@ def fetch_url(url: str) -> str:
     raise last_err
 
 
+def today_taipei() -> date:
+    return datetime.now(TAIPEI_TZ).date()
+
+
 def extract_city(address: str) -> str:
     addr = re.sub(r'^\d{3,6}', '', address)
     for city in CITIES:
@@ -86,7 +97,7 @@ def extract_city(address: str) -> str:
 
 
 def determine_year(month: int) -> int:
-    now = datetime.now()
+    now = today_taipei()
     if month < now.month - 6:
         return now.year + 1
     return now.year
@@ -185,14 +196,29 @@ def parse_csv_sheet(csv_text: str, source_name: str) -> list:
     return events
 
 
-def fetch_sheet(source_name: str, sheet_id: str) -> tuple:
+def detect_source_type(csv_text: str) -> str:
+    preview = "\n".join(csv_text.splitlines()[:8])
+    if any(kw in preview for kw in ["B4通路", "B4合作", "合作據點"]):
+        return "B4合作據點G3"
+    if any(kw in preview for kw in ["門市G3", "Funbox", "FUNBOX", "百貨"]):
+        return "Funbox門市G3"
+    return ""
+
+
+def fetch_sheet_csv(sheet_id: str) -> tuple:
     url = SHEETS_CSV_URL.format(sheet_id=sheet_id)
     try:
         csv_text = fetch_url(url)
-        events = parse_csv_sheet(csv_text, source_name)
-        return events, None
+        return csv_text, None
     except Exception as e:
-        return [], str(e)
+        return "", str(e)
+
+
+def fetch_sheet(source_name: str, sheet_id: str) -> tuple:
+    csv_text, err = fetch_sheet_csv(sheet_id)
+    if err:
+        return [], err
+    return parse_csv_sheet(csv_text, source_name), None
 
 
 def normalize_period(period: str) -> str:
@@ -200,9 +226,52 @@ def normalize_period(period: str) -> str:
                   r'\1-\2、\3月', period.strip())
 
 
+def parse_period(period: str) -> tuple:
+    m = re.match(r'(\d{4})-(\d{1,2})、(\d{1,2})月', normalize_period(period))
+    if not m:
+        return 0, 0, 0
+    return int(m.group(1)), int(m.group(2)), int(m.group(3))
+
+
+def make_period(year: int, month: int) -> str:
+    start_month = month if month % 2 == 1 else month - 1
+    return f"{year}-{start_month}、{start_month + 1}月"
+
+
+def add_months(year: int, month: int, months: int) -> tuple:
+    month_index = (year * 12) + (month - 1) + months
+    return month_index // 12, (month_index % 12) + 1
+
+
+def target_search_periods() -> list:
+    today = today_taipei()
+    current = make_period(today.year, today.month)
+    next_year, next_month = add_months(today.year, today.month, 2)
+    next_period = make_period(next_year, next_month)
+    return list(dict.fromkeys([current, next_period]))
+
+
+def period_search_terms(period: str) -> list:
+    year, start_month, end_month = parse_period(period)
+    if not year:
+        return [period]
+    return [
+        period,
+        f"{year} {start_month} {end_month}月",
+        f"{year} {start_month}~{end_month}月",
+        f"{year} {start_month}~{end_month}",
+    ]
+
+
 def extract_sheet_id(cell: str) -> str:
     m = re.search(r'docs\.google\.com/spreadsheets/d/([a-zA-Z0-9_-]+)', cell)
     return m.group(1) if m else ""
+
+
+def extract_sheet_ids(text: str) -> list:
+    decoded = urllib.parse.unquote(text)
+    ids = re.findall(r'docs\.google\.com/spreadsheets/d/([a-zA-Z0-9_-]+)', decoded)
+    return list(dict.fromkeys(ids))
 
 
 def parse_hackmd_all_sheets(html: str) -> list:
@@ -240,6 +309,111 @@ def parse_hackmd_all_sheets(html: str) -> list:
 
     print(f"  Found {len(results)} period rows in HackMD")
     return results
+
+
+def search_google_cse(query: str) -> str:
+    api_key = os.environ.get("GOOGLE_SEARCH_API_KEY", "")
+    cx = os.environ.get("GOOGLE_SEARCH_CX", "")
+    if not api_key or not cx:
+        return ""
+    params = urllib.parse.urlencode({
+        "key": api_key,
+        "cx": cx,
+        "q": query,
+        "num": 10,
+    })
+    data = json.loads(fetch_url(f"{GOOGLE_CSE_URL}?{params}"))
+    chunks = []
+    for item in data.get("items", []):
+        chunks.append(item.get("link", ""))
+        chunks.append(item.get("snippet", ""))
+    return "\n".join(chunks)
+
+
+def search_public_html(query: str) -> str:
+    providers = [
+        ("Google", GOOGLE_SEARCH_HTML_URL, {"q": query, "num": "10", "hl": "zh-TW"}),
+        ("Bing", BING_SEARCH_HTML_URL, {"q": query, "count": "10"}),
+    ]
+    chunks = []
+    for name, base_url, params in providers:
+        try:
+            url = f"{base_url}?{urllib.parse.urlencode(params)}"
+            chunks.append(fetch_url(url))
+        except Exception as e:
+            print(f"    {name} search failed: {e}")
+    return "\n".join(chunks)
+
+
+def search_sheet_ids(query: str) -> list:
+    texts = []
+    try:
+        cse_text = search_google_cse(query)
+        if cse_text:
+            texts.append(cse_text)
+    except Exception as e:
+        print(f"    Google CSE search failed: {e}")
+
+    if not texts:
+        try:
+            texts.append(search_public_html(query))
+            time.sleep(1)
+        except Exception as e:
+            print(f"    Public search failed: {e}")
+
+    ids = []
+    for text in texts:
+        ids.extend(extract_sheet_ids(text))
+    return list(dict.fromkeys(ids))
+
+
+def discover_sheets_by_search(existing_sheet_ids: set, loaded_source_names: set) -> list:
+    discovered = []
+    seen = set(existing_sheet_ids)
+    for period in target_search_periods():
+        missing_types = [
+            source_type for source_type in ("Funbox門市G3", "B4合作據點G3")
+            if get_source_name(source_type, period) not in loaded_source_names
+        ]
+        if not missing_types:
+            print(f"  {period}: already has Funbox and B4 sources, skipping search")
+            continue
+        for term in period_search_terms(period):
+            queries = [f'"戰鬥陀螺X" "比賽資訊" "{term}" "docs.google.com/spreadsheets"']
+            if "Funbox門市G3" in missing_types:
+                queries.append(f'"戰鬥陀螺X" "G3" "{term}" "docs.google.com/spreadsheets"')
+            if "B4合作據點G3" in missing_types:
+                queries.append(f'"戰鬥陀螺X" "B4" "{term}" "docs.google.com/spreadsheets"')
+            for query in queries:
+                print(f"  Searching: {query}")
+                for sheet_id in search_sheet_ids(query):
+                    if sheet_id in seen:
+                        continue
+                    seen.add(sheet_id)
+                    csv_text, err = fetch_sheet_csv(sheet_id)
+                    if err:
+                        print(f"    ✗ {sheet_id[:16]}... fetch failed: {err}")
+                        continue
+                    source_type = detect_source_type(csv_text)
+                    if not source_type:
+                        print(f"    - {sheet_id[:16]}... skipped: unknown sheet type")
+                        continue
+                    if source_type not in missing_types:
+                        print(f"    - {sheet_id[:16]}... skipped: {source_type} already loaded")
+                        continue
+                    events = parse_csv_sheet(csv_text, get_source_name(source_type, period))
+                    if not events:
+                        print(f"    - {sheet_id[:16]}... skipped: no parseable events")
+                        continue
+                    discovered.append({
+                        "period": period,
+                        "source_type": source_type,
+                        "sheet_id": sheet_id,
+                        "events": events,
+                        "query": query,
+                    })
+                    print(f"    ✓ {source_type} ({period}): {len(events)} events from search")
+    return discovered
 
 
 def get_source_name(source_type: str, period: str) -> str:
@@ -381,6 +555,31 @@ def main():
                         err_msg = b4_err if b4_is_wrong else f"no events (error: {b4_err})"
                         print(f"  ✗ {b4_name}: {err_msg}")
 
+    # =================================================================
+    # STEP 3: Best-effort search discovery for current/next period sheets
+    # =================================================================
+    print("\n[Step 3] Searching for current/next period Google Sheets...")
+    known_sheet_ids = {s.get("sheet_id") for s in all_sources if s.get("sheet_id")}
+    for row in hackmd_rows:
+        if row.get("funbox_id"):
+            known_sheet_ids.add(row["funbox_id"])
+        if row.get("b4_id"):
+            known_sheet_ids.add(row["b4_id"])
+
+    for found in discover_sheets_by_search(known_sheet_ids, sources_processed):
+        source_name = get_source_name(found["source_type"], found["period"])
+        if source_name in sources_processed:
+            print(f"  → {source_name}: already loaded, skipping searched sheet")
+            continue
+        all_events.extend(found["events"])
+        all_sources.append({
+            "name": source_name,
+            "sheet_id": found["sheet_id"],
+            "source": "web_search",
+            "query": found["query"],
+        })
+        sources_processed.add(source_name)
+
     # Validate
     if not all_events:
         print("\nERROR: No events found at all!")
@@ -395,6 +594,19 @@ def main():
             seen.add(key)
             deduped.append(ev)
 
+    today_str = today_taipei().isoformat()
+    before_cleanup = len(deduped)
+    deduped = [e for e in deduped if e["date"] >= today_str]
+    removed = before_cleanup - len(deduped)
+    print(f"\nRemoved {removed} expired events before {today_str}")
+
+    if not deduped:
+        print("\nERROR: No upcoming events found after removing expired events!")
+        sys.exit(1)
+
+    active_sources = {e["source"] for e in deduped}
+    all_sources = [s for s in all_sources if s["name"] in active_sources]
+
     # Sort and assign IDs
     deduped.sort(key=lambda e: e["date"], reverse=True)
     for i, event in enumerate(deduped, 1):
@@ -402,7 +614,7 @@ def main():
         event["id"] = f"{prefix}-{i:03d}"
 
     output = {
-        "lastUpdated": date.today().isoformat(),
+        "lastUpdated": today_str,
         "sources": all_sources,
         "events": deduped,
     }

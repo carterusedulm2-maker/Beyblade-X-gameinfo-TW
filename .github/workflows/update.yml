@@ -37,7 +37,16 @@ jobs:
         run: python3 scraper.py
 
       - name: Validate events.json
-        run: python3 -c "import json; d=json.load(open('events.json')); assert len(d['events'])>0; print(f'OK')"
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timedelta, timezone
+          d = json.load(open('events.json'))
+          today = datetime.now(timezone(timedelta(hours=8))).date().isoformat()
+          assert len(d['events']) > 0
+          assert all(e['date'] >= today for e in d['events'])
+          print('OK')
+          PY
 
       - name: Commit changes
         run: |
