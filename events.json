@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01",
+  "lastUpdated": "2026-06-02",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-5、6月)",
@@ -4099,20 +4099,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-292"
-    },
-    {
-      "source": "B4合作據點G3 (2026-5、6月)",
-      "storeName": "卡.KA",
-      "phone": "06-223-6969",
-      "address": "台南市中西區中正路343號(河樂廣場)",
-      "city": "台南市",
-      "date": "2026-06-01",
-      "time": "20:00",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-293"
     }
   ]
 }
