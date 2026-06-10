@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-09",
+  "lastUpdated": "2026-06-10",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-5、6月)",
@@ -938,6 +938,34 @@
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
+      "storeName": "屏東夢想街",
+      "phone": "0938-881-189",
+      "address": "屏東市康定街9之23號",
+      "city": "屏東縣",
+      "date": "2026-06-26",
+      "time": "22:00",
+      "capacity": 64,
+      "registrationMethod": "皆可",
+      "category": "公開 (6歲以上)",
+      "notes": "",
+      "id": "b4-067"
+    },
+    {
+      "source": "B4合作據點G3 (2026-5、6月)",
+      "storeName": "RiRiCO",
+      "phone": "0986-948-303",
+      "address": "台中市 北屯區 北屯路 288號 B1",
+      "city": "台中市",
+      "date": "2026-06-24",
+      "time": "19:30",
+      "capacity": 32,
+      "registrationMethod": "現場",
+      "category": "公開 (6歲以上)",
+      "notes": "",
+      "id": "b4-068"
+    },
+    {
+      "source": "B4合作據點G3 (2026-5、6月)",
       "storeName": "漢謚玩具社",
       "phone": "0915-687779",
       "address": "高雄市苓雅區中華四路244號2樓",
@@ -948,7 +976,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-067"
+      "id": "b4-069"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -962,7 +990,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-068"
+      "id": "b4-070"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -976,7 +1004,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-069"
+      "id": "b4-071"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -990,7 +1018,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-070"
+      "id": "b4-072"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1004,7 +1032,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-071"
+      "id": "b4-073"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1018,7 +1046,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-072"
+      "id": "b4-074"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1032,7 +1060,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-073"
+      "id": "b4-075"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1046,7 +1074,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-074"
+      "id": "b4-076"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1060,7 +1088,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-075"
+      "id": "b4-077"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1074,7 +1102,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-076"
+      "id": "b4-078"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1088,7 +1116,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-077"
+      "id": "b4-079"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1102,7 +1130,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-078"
+      "id": "b4-080"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1116,7 +1144,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-079"
+      "id": "b4-081"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1130,7 +1158,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-080"
+      "id": "b4-082"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1144,7 +1172,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-081"
+      "id": "b4-083"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1158,7 +1186,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-082"
+      "id": "b4-084"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1172,7 +1200,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-083"
+      "id": "b4-085"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1186,7 +1214,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-084"
+      "id": "b4-086"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1200,7 +1228,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-085"
+      "id": "b4-087"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1214,7 +1242,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-086"
+      "id": "b4-088"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1228,7 +1256,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-087"
+      "id": "b4-089"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1242,7 +1270,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-088"
+      "id": "b4-090"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1256,7 +1284,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-089"
+      "id": "b4-091"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1270,7 +1298,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-090"
+      "id": "b4-092"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1284,7 +1312,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-091"
+      "id": "b4-093"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1298,7 +1326,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-092"
+      "id": "b4-094"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1312,7 +1340,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-093"
+      "id": "b4-095"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1326,7 +1354,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-094"
+      "id": "b4-096"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1340,7 +1368,7 @@
       "registrationMethod": "電話",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-095"
+      "id": "b4-097"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1354,7 +1382,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-096"
+      "id": "b4-098"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1368,7 +1396,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-097"
+      "id": "funbox-099"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1382,7 +1410,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-098"
+      "id": "funbox-100"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1396,7 +1424,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-099"
+      "id": "funbox-101"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1410,7 +1438,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "funbox-100"
+      "id": "funbox-102"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1424,7 +1452,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-101"
+      "id": "funbox-103"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1438,7 +1466,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-102"
+      "id": "funbox-104"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1452,7 +1480,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "funbox-103"
+      "id": "funbox-105"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1466,7 +1494,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-104"
+      "id": "b4-106"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1480,7 +1508,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-105"
+      "id": "b4-107"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1494,7 +1522,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-106"
+      "id": "b4-108"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1508,7 +1536,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-107"
+      "id": "b4-109"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1522,7 +1550,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-108"
+      "id": "b4-110"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1536,7 +1564,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-109"
+      "id": "b4-111"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1550,7 +1578,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-110"
+      "id": "b4-112"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1564,7 +1592,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-111"
+      "id": "b4-113"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1578,7 +1606,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-112"
+      "id": "b4-114"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1592,7 +1620,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-113"
+      "id": "b4-115"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1606,7 +1634,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-114"
+      "id": "b4-116"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1620,7 +1648,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-115"
+      "id": "b4-117"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1634,7 +1662,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-116"
+      "id": "b4-118"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1648,7 +1676,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-117"
+      "id": "b4-119"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1662,7 +1690,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-118"
+      "id": "b4-120"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1676,7 +1704,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-119"
+      "id": "b4-121"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1690,7 +1718,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-120"
+      "id": "b4-122"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1704,7 +1732,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-121"
+      "id": "b4-123"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1718,7 +1746,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-122"
+      "id": "b4-124"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1732,7 +1760,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-123"
+      "id": "b4-125"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1746,7 +1774,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-124"
+      "id": "b4-126"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1760,7 +1788,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-125"
+      "id": "b4-127"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1774,7 +1802,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-126"
+      "id": "b4-128"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1788,7 +1816,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-127"
+      "id": "b4-129"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1802,7 +1830,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-128"
+      "id": "b4-130"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1816,7 +1844,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-129"
+      "id": "b4-131"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1830,7 +1858,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-130"
+      "id": "b4-132"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1844,7 +1872,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-131"
+      "id": "b4-133"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1858,7 +1886,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-132"
+      "id": "funbox-134"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1872,7 +1900,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-133"
+      "id": "funbox-135"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1886,7 +1914,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-134"
+      "id": "funbox-136"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1900,7 +1928,7 @@
       "registrationMethod": "現場",
       "category": "成人(12歲以上)",
       "notes": "",
-      "id": "funbox-135"
+      "id": "funbox-137"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -1914,7 +1942,21 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-136"
+      "id": "funbox-138"
+    },
+    {
+      "source": "B4合作據點G3 (2026-5、6月)",
+      "storeName": "RiRiCO",
+      "phone": "0986-948-303",
+      "address": "台中市 北屯區 北屯路 288號 B1",
+      "city": "台中市",
+      "date": "2026-06-17",
+      "time": "19:30",
+      "capacity": 32,
+      "registrationMethod": "現場",
+      "category": "公開 (6歲以上)",
+      "notes": "",
+      "id": "b4-139"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1928,7 +1970,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-137"
+      "id": "b4-140"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1942,7 +1984,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-138"
+      "id": "b4-141"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1956,7 +1998,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-139"
+      "id": "b4-142"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1970,7 +2012,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-140"
+      "id": "b4-143"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1984,7 +2026,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-141"
+      "id": "b4-144"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -1998,7 +2040,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-142"
+      "id": "b4-145"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2012,7 +2054,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-143"
+      "id": "b4-146"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2026,7 +2068,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-144"
+      "id": "b4-147"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2040,7 +2082,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-145"
+      "id": "b4-148"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2054,7 +2096,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-146"
+      "id": "b4-149"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2068,7 +2110,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-147"
+      "id": "b4-150"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2082,7 +2124,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-148"
+      "id": "b4-151"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2096,7 +2138,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-149"
+      "id": "b4-152"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2110,7 +2152,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-150"
+      "id": "b4-153"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2124,7 +2166,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-151"
+      "id": "b4-154"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2138,7 +2180,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-152"
+      "id": "b4-155"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2152,7 +2194,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-153"
+      "id": "b4-156"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2166,7 +2208,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-154"
+      "id": "b4-157"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2180,7 +2222,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-155"
+      "id": "b4-158"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2194,7 +2236,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-156"
+      "id": "b4-159"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2208,7 +2250,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-157"
+      "id": "b4-160"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2222,7 +2264,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-158"
+      "id": "b4-161"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2236,7 +2278,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-159"
+      "id": "b4-162"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2250,7 +2292,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-160"
+      "id": "b4-163"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2264,7 +2306,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-161"
+      "id": "b4-164"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2278,7 +2320,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-162"
+      "id": "b4-165"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2292,7 +2334,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-163"
+      "id": "b4-166"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2306,7 +2348,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-164"
+      "id": "b4-167"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2320,7 +2362,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-165"
+      "id": "b4-168"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2334,7 +2376,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-166"
+      "id": "b4-169"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2348,7 +2390,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-167"
+      "id": "b4-170"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2362,7 +2404,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-168"
+      "id": "b4-171"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2376,7 +2418,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-169"
+      "id": "b4-172"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2390,7 +2432,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-170"
+      "id": "b4-173"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2404,7 +2446,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-171"
+      "id": "b4-174"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2418,7 +2460,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-172"
+      "id": "b4-175"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2432,7 +2474,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-173"
+      "id": "b4-176"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2446,7 +2488,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-174"
+      "id": "b4-177"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2460,7 +2502,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-175"
+      "id": "b4-178"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2474,7 +2516,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-176"
+      "id": "b4-179"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2488,7 +2530,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-177"
+      "id": "funbox-180"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2502,7 +2544,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-178"
+      "id": "funbox-181"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2516,7 +2558,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-179"
+      "id": "funbox-182"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2530,7 +2572,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-180"
+      "id": "funbox-183"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2544,7 +2586,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-181"
+      "id": "funbox-184"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2558,7 +2600,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-182"
+      "id": "funbox-185"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2572,7 +2614,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-183"
+      "id": "b4-186"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2586,7 +2628,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-184"
+      "id": "b4-187"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2600,7 +2642,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-185"
+      "id": "b4-188"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2614,7 +2656,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-186"
+      "id": "b4-189"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2628,7 +2670,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-187"
+      "id": "b4-190"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2642,7 +2684,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-188"
+      "id": "b4-191"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2656,7 +2698,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-189"
+      "id": "b4-192"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2670,7 +2712,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-190"
+      "id": "b4-193"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2684,7 +2726,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-191"
+      "id": "b4-194"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2698,7 +2740,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-192"
+      "id": "b4-195"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2712,7 +2754,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-193"
+      "id": "b4-196"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2726,7 +2768,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-194"
+      "id": "b4-197"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2740,7 +2782,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-195"
+      "id": "b4-198"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2754,7 +2796,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-196"
+      "id": "b4-199"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2768,7 +2810,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-197"
+      "id": "b4-200"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2782,7 +2824,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-198"
+      "id": "b4-201"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2796,7 +2838,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-199"
+      "id": "b4-202"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2810,7 +2852,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-200"
+      "id": "b4-203"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2824,7 +2866,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-201"
+      "id": "b4-204"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2838,7 +2880,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-202"
+      "id": "b4-205"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2852,7 +2894,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-203"
+      "id": "b4-206"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2866,7 +2908,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-204"
+      "id": "b4-207"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2880,7 +2922,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-205"
+      "id": "b4-208"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2894,7 +2936,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-206"
+      "id": "b4-209"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2908,7 +2950,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-207"
+      "id": "b4-210"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2922,7 +2964,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-208"
+      "id": "b4-211"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2936,7 +2978,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-209"
+      "id": "b4-212"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2950,7 +2992,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-210"
+      "id": "b4-213"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -2964,7 +3006,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-211"
+      "id": "b4-214"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2978,7 +3020,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-212"
+      "id": "funbox-215"
     },
     {
       "source": "Funbox門市G3 (2026-5、6月)",
@@ -2992,7 +3034,7 @@
       "registrationMethod": "電話",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-213"
+      "id": "funbox-216"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -3006,7 +3048,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-214"
+      "id": "b4-217"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -3020,7 +3062,21 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-215"
+      "id": "b4-218"
+    },
+    {
+      "source": "B4合作據點G3 (2026-5、6月)",
+      "storeName": "RiRiCO",
+      "phone": "0986-948-303",
+      "address": "台中市 北屯區 北屯路 288號 B1",
+      "city": "台中市",
+      "date": "2026-06-10",
+      "time": "19:30",
+      "capacity": 32,
+      "registrationMethod": "現場",
+      "category": "公開 (6歲以上)",
+      "notes": "",
+      "id": "b4-219"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -3034,7 +3090,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-216"
+      "id": "b4-220"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -3048,7 +3104,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-217"
+      "id": "b4-221"
     },
     {
       "source": "B4合作據點G3 (2026-5、6月)",
@@ -3062,21 +3118,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-218"
-    },
-    {
-      "source": "B4合作據點G3 (2026-5、6月)",
-      "storeName": "孩子玩伴-香山店",
-      "phone": "03-5309900",
-      "address": "新竹市牛埔東路188號",
-      "city": "新竹市",
-      "date": "2026-06-09",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-219"
+      "id": "b4-222"
     }
   ]
 }
