@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-06-13",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-5、6月)",
@@ -3105,34 +3105,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "funbox-221"
-    },
-    {
-      "source": "B4合作據點G3 (2026-5、6月)",
-      "storeName": "玩具e哥 溪尾家福",
-      "phone": "02-7730-4425",
-      "address": "新北市三重區溪尾街125號1樓",
-      "city": "新北市",
-      "date": "2026-06-12",
-      "time": "14:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-222"
-    },
-    {
-      "source": "B4合作據點G3 (2026-5、6月)",
-      "storeName": "玖零玩具",
-      "phone": "06-220-8911",
-      "address": "台南市中西區民權路一段1號",
-      "city": "台南市",
-      "date": "2026-06-12",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-223"
     }
   ]
 }
