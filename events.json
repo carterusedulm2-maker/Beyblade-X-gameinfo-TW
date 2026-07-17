@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15",
+  "lastUpdated": "2026-07-17",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -7766,118 +7766,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-554"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "雄大書局-休閒館",
-      "phone": "07-221-0012",
-      "address": "高雄市前金區中華四路312號",
-      "city": "高雄市",
-      "date": "2026-07-16",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-555"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "漢謚玩具社",
-      "phone": "0915-687779",
-      "address": "高雄市苓雅區中華四路244號2樓",
-      "city": "高雄市",
-      "date": "2026-07-15",
-      "time": "19:30",
-      "capacity": 128,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-556"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "中興精品",
-      "phone": "02-23037609",
-      "address": "台北市中正區中華路二段305巷9號1樓",
-      "city": "台北市",
-      "date": "2026-07-15",
-      "time": "19:30",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-557"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "RiRiCO",
-      "phone": "986948303",
-      "address": "台中市北屯區北屯路288號B1",
-      "city": "台中市",
-      "date": "2026-07-15",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-558"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "TMG",
-      "phone": "0905132938",
-      "address": "桃園市中壢區三光路155號1樓",
-      "city": "桃園市",
-      "date": "2026-07-15",
-      "time": "15:00",
-      "capacity": 32,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-559"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "孩子玩伴-關埔店",
-      "phone": "03-6667686",
-      "address": "新竹市東區關新路85號",
-      "city": "新竹市",
-      "date": "2026-07-15",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-560"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "瑪利玩具",
-      "phone": "03-380-6139",
-      "address": "桃園市大溪區員林路二段358號",
-      "city": "桃園市",
-      "date": "2026-07-15",
-      "time": "20:00",
-      "capacity": 48,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-561"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-07-15",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-562"
     }
   ]
 }
