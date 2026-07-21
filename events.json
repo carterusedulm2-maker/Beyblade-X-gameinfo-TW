@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20",
+  "lastUpdated": "2026-07-21",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -6366,20 +6366,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-454"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "玩具e哥桃園南崁店",
-      "phone": "(03)271-6400",
-      "address": "桃園市蘆竹區中正路1號5樓",
-      "city": "桃園市",
-      "date": "2026-07-20",
-      "time": "19:00",
-      "capacity": 24,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-455"
     }
   ]
 }
