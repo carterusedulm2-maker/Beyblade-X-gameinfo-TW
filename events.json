@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-23",
+  "lastUpdated": "2026-07-24",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -6282,20 +6282,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-448"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "無限魂玩具社",
-      "phone": "04-24823381",
-      "address": "台中市大里區東明路175巷27弄5號",
-      "city": "台中市",
-      "date": "2026-07-23",
-      "time": "19:30",
-      "capacity": 48,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-449"
     }
   ]
 }
