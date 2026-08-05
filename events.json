@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-04",
+  "lastUpdated": "2026-08-05",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -4364,20 +4364,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-311"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "刺客工作室",
-      "phone": "0929876131",
-      "address": "高雄市三民區安吉里民族一路80號39樓之一",
-      "city": "高雄市",
-      "date": "2026-08-04",
-      "time": "20:00",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-312"
     }
   ]
 }
