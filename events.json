@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-11",
+  "lastUpdated": "2026-08-12",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -3370,20 +3370,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-240"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "孩子玩伴-香山店",
-      "phone": "03-5309900",
-      "address": "新竹市香山區牛埔東路188號",
-      "city": "新竹市",
-      "date": "2026-08-11",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-241"
     }
   ]
 }
