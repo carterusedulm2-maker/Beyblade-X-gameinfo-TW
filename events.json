@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-08-14",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -3272,20 +3272,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-233"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "雄大書局-休閒館",
-      "phone": "07-221-0012",
-      "address": "高雄市前金區中華四路312號",
-      "city": "高雄市",
-      "date": "2026-08-13",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-234"
     }
   ]
 }
