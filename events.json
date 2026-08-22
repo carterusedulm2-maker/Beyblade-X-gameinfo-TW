@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-08-22",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-7、8月)",
@@ -1760,62 +1760,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-125"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "玩具e哥 溪尾家福",
-      "phone": "02-7730-4425",
-      "address": "新北市三重區溪尾街125號1樓",
-      "city": "新北市",
-      "date": "2026-08-21",
-      "time": "14:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-126"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "星玩具",
-      "phone": "04-23954590",
-      "address": "台中市太平區旱溪東路一段590號",
-      "city": "台中市",
-      "date": "2026-08-21",
-      "time": "18:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-127"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "胖豬珠(金門)",
-      "phone": "0963-377-223",
-      "address": "金門縣金寧鄉伯玉路一段232-4號",
-      "city": "金門縣",
-      "date": "2026-08-21",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-128"
-    },
-    {
-      "source": "B4合作據點G3 (2026-7、8月)",
-      "storeName": "玖零玩具",
-      "phone": "06-220-8911",
-      "address": "台南市中西區民權路一段1號",
-      "city": "台南市",
-      "date": "2026-08-21",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-129"
     }
   ]
 }
