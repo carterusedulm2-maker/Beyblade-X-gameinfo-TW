@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-03",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -10458,34 +10458,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-746"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-09-02",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-747"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "孩子玩伴-關埔店",
-      "phone": "36667686",
-      "address": "新竹市東區關新路85號",
-      "city": "新竹市",
-      "date": "2026-09-02",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-748"
     }
   ]
 }
