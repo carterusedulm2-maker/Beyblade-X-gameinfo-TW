@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-04",
+  "lastUpdated": "2026-09-05",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -10402,48 +10402,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-742"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "好兒童圖書玩具專賣店",
-      "phone": "0922175571",
-      "address": "基隆市仁愛區愛四路3-3號",
-      "city": "基隆市",
-      "date": "2026-09-04",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-743"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玖零玩具",
-      "phone": "06-220-8911",
-      "address": "台南市中西區民權路一段1號",
-      "city": "台南市",
-      "date": "2026-09-04",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-744"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "怪獸電玩",
-      "phone": "0902297207",
-      "address": "新北市永和區中山路一段146號",
-      "city": "新北市",
-      "date": "2026-09-04",
-      "time": "22:30",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-745"
     }
   ]
 }
