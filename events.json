@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-08",
+  "lastUpdated": "2026-09-09",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -1144,7 +1144,7 @@
       "date": "2026-10-24",
       "time": "20:00",
       "capacity": 60,
-      "registrationMethod": "現場",
+      "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-081"
@@ -2362,7 +2362,7 @@
       "date": "2026-10-17",
       "time": "20:00",
       "capacity": 60,
-      "registrationMethod": "現場",
+      "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-168"
@@ -6156,7 +6156,7 @@
       "date": "2026-09-26",
       "time": "20:00",
       "capacity": 60,
-      "registrationMethod": "現場",
+      "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-439"
@@ -7416,7 +7416,7 @@
       "date": "2026-09-19",
       "time": "20:00",
       "capacity": 60,
-      "registrationMethod": "現場",
+      "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-529"
@@ -9282,34 +9282,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-662"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "無限魂玩具社",
-      "phone": "04-2482-3381",
-      "address": "台中市大里區東明路175巷27弄5號",
-      "city": "台中市",
-      "date": "2026-09-08",
-      "time": "19:30",
-      "capacity": 48,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-663"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "TMG",
-      "phone": "0905132938",
-      "address": "桃園市中壢區三光路155號1樓",
-      "city": "桃園市",
-      "date": "2026-09-08",
-      "time": "15:00",
-      "capacity": 32,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-664"
     }
   ]
 }
