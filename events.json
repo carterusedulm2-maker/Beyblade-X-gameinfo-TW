@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10",
+  "lastUpdated": "2026-09-11",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -9030,48 +9030,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-644"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "Fun學桌遊教室",
-      "phone": "908295765",
-      "address": "高雄市旗山區瑞吉里旗文路7號",
-      "city": "高雄市",
-      "date": "2026-09-10",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-645"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "雄大書局-休閒館",
-      "phone": "07-221-0012",
-      "address": "高雄市前金區中華四路312號",
-      "city": "高雄市",
-      "date": "2026-09-10",
-      "time": "19:30",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-646"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "檔案島",
-      "phone": "07-3136161",
-      "address": "高雄市三民區松江街35號",
-      "city": "高雄市",
-      "date": "2026-09-10",
-      "time": "20:00",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-647"
     }
   ]
 }
