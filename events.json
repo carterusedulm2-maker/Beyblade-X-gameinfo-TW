@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16",
+  "lastUpdated": "2026-09-17",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -7700,62 +7700,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-549"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "漢謚玩具社",
-      "phone": "915687779",
-      "address": "高雄市苓雅區中華四路244號2樓",
-      "city": "高雄市",
-      "date": "2026-09-16",
-      "time": "19:30",
-      "capacity": 128,
-      "registrationMethod": "FB報名",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-550"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "RiRiCO",
-      "phone": "986948303",
-      "address": "臺中市北屯區東光里北屯路288號B1",
-      "city": "台中市",
-      "date": "2026-09-16",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-551"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-09-16",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-552"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具E哥雲林虎尾店",
-      "phone": "05-770-6615",
-      "address": "雲林縣虎尾鎮立德路6號",
-      "city": "雲林縣",
-      "date": "2026-09-16",
-      "time": "14:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-553"
     }
   ]
 }
