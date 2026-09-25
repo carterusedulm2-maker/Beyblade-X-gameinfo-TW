@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24",
+  "lastUpdated": "2026-09-25",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -6356,76 +6356,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-453"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "森森文具玩具",
-      "phone": "04-2558-9226",
-      "address": "臺中市后里區成功路356號",
-      "city": "台中市",
-      "date": "2026-09-24",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-454"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "森森文具玩具",
-      "phone": "04-2558-9226",
-      "address": "臺中市后里區成功路356號",
-      "city": "台中市",
-      "date": "2026-09-24",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-455"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "Fun學桌遊教室",
-      "phone": "908295765",
-      "address": "高雄市旗山區瑞吉里旗文路7號",
-      "city": "高雄市",
-      "date": "2026-09-24",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-456"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "雄大書局-休閒館",
-      "phone": "07-221-0012",
-      "address": "高雄市前金區中華四路312號",
-      "city": "高雄市",
-      "date": "2026-09-24",
-      "time": "19:30",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-457"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "檔案島",
-      "phone": "07-3136161",
-      "address": "高雄市三民區松江街35號",
-      "city": "高雄市",
-      "date": "2026-09-24",
-      "time": "20:00",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-458"
     }
   ]
 }
