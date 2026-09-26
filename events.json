@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25",
+  "lastUpdated": "2026-09-26",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -6314,48 +6314,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-450"
-    },
-    {
-      "source": "Funbox門市G3 (2026-9、10月)",
-      "storeName": "遠百信義A13",
-      "phone": "02-8786-4150",
-      "address": "台北市信義區松仁路58號5樓",
-      "city": "台北市",
-      "date": "2026-09-25",
-      "time": "14:00",
-      "capacity": 48,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "funbox-451"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "唐采-五權店",
-      "phone": "0979-710195",
-      "address": "台中市南屯區五權西路二段245號",
-      "city": "台中市",
-      "date": "2026-09-25",
-      "time": "14:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-452"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "多米文化廣場-阿蓮店",
-      "phone": "0972-506976",
-      "address": "高雄市阿蓮區中正路483號",
-      "city": "高雄市",
-      "date": "2026-09-25",
-      "time": "20:00",
-      "capacity": 60,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-453"
     }
   ]
 }
