@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28",
+  "lastUpdated": "2026-09-29",
   "sources": [
     {
       "name": "B4合作據點G3 (2026-7、8月)",
@@ -5250,76 +5250,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-374"
-    },
-    {
-      "source": "Funbox門市G3 (2026-9、10月)",
-      "storeName": "中壢大江購物中心",
-      "phone": "03-4680277",
-      "address": "桃園市中壢區中園路二段501號2樓",
-      "city": "桃園市",
-      "date": "2026-09-28",
-      "time": "16:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "funbox-375"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "秘密積地",
-      "phone": "0921-731718",
-      "address": "台中市北屯區軍和街38號",
-      "city": "台中市",
-      "date": "2026-09-28",
-      "time": "14:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-376"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "刺客工作室",
-      "phone": "929876131",
-      "address": "高雄市三民區安吉里民族一路80號39樓之一號",
-      "city": "高雄市",
-      "date": "2026-09-28",
-      "time": "19:30",
-      "capacity": 24,
-      "registrationMethod": "門市社群",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-377"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "松梅桌遊舖",
-      "phone": "07-7162223",
-      "address": "高雄市苓雅區自強三路2號3F",
-      "city": "高雄市",
-      "date": "2026-09-28",
-      "time": "20:00",
-      "capacity": 64,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-378"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具e哥新莊昌隆",
-      "phone": "02-77050779",
-      "address": "新北市新莊區昌隆街83號1樓",
-      "city": "新北市",
-      "date": "2026-09-28",
-      "time": "14:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-379"
     }
   ]
 }
