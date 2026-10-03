@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-03",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -6728,48 +6728,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-479"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "華泰玩具花蓮店",
-      "phone": "03-8360767",
-      "address": "花蓮市和平路589巷2號",
-      "city": "花蓮縣",
-      "date": "2026-10-02",
-      "time": "18:00",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-480"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "華泰玩具花蓮店",
-      "phone": "03-8360767",
-      "address": "花蓮市和平路589巷2號",
-      "city": "花蓮縣",
-      "date": "2026-10-02",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-481"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玖零玩具",
-      "phone": "06-220-8911",
-      "address": "台南市中西區民權路一段1號",
-      "city": "台南市",
-      "date": "2026-10-02",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-482"
     }
   ]
 }
