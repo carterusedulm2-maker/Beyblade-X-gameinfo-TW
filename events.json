@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-06",
+  "lastUpdated": "2026-10-07",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -5678,48 +5678,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-404"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "無限魂玩具社",
-      "phone": "04-2482-3381",
-      "address": "台中市大里區東明路175巷27弄5號",
-      "city": "台中市",
-      "date": "2026-10-06",
-      "time": "19:30",
-      "capacity": 48,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-405"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "孩子玩伴-香山店",
-      "phone": "35309900",
-      "address": "新竹市香山區牛埔東路188號",
-      "city": "新竹市",
-      "date": "2026-10-06",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-406"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "怪獸電玩",
-      "phone": "0902297207",
-      "address": "新北市永和區中山路一段146號",
-      "city": "新北市",
-      "date": "2026-10-06",
-      "time": "22:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-407"
     }
   ]
 }
