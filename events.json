@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-09",
+  "lastUpdated": "2026-10-10",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -5426,76 +5426,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-386"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "唐采-大里店",
-      "phone": "0979-831443",
-      "address": "台中市大里區德芳南路259號",
-      "city": "台中市",
-      "date": "2026-10-09",
-      "time": "14:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-387"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "刺客工作室",
-      "phone": "929876131",
-      "address": "高雄市火車站B1",
-      "city": "高雄市",
-      "date": "2026-10-09",
-      "time": "15:00",
-      "capacity": 64,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-388"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "TOY WORLD 新莊佳瑪",
-      "phone": "02-7730-9506",
-      "address": "新北市新莊區幸福路763號3樓",
-      "city": "新北市",
-      "date": "2026-10-09",
-      "time": "13:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-389"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具e哥花蓮萬家福",
-      "phone": "03-8900390",
-      "address": "花蓮縣新城鄉嘉里路15號1樓",
-      "city": "花蓮縣",
-      "date": "2026-10-09",
-      "time": "13:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-390"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "多米文化廣場-阿蓮店",
-      "phone": "0972-506976",
-      "address": "高雄市阿蓮區中正路483號",
-      "city": "高雄市",
-      "date": "2026-10-09",
-      "time": "20:00",
-      "capacity": 60,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-391"
     }
   ]
 }
