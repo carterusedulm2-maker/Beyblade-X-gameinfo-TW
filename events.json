@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14",
+  "lastUpdated": "2026-10-15",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -4446,76 +4446,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-316"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "漢謚玩具社",
-      "phone": "915687779",
-      "address": "高雄市苓雅區中華四路244號2樓",
-      "city": "高雄市",
-      "date": "2026-10-14",
-      "time": "19:30",
-      "capacity": 128,
-      "registrationMethod": "FB報名",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-317"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "RiRiCO",
-      "phone": "986948303",
-      "address": "臺中市北屯區東光里北屯路288號B1",
-      "city": "台中市",
-      "date": "2026-10-14",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-318"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "松梅桌遊舖",
-      "phone": "07-7162225",
-      "address": "高雄市苓雅區自強三路2號3F",
-      "city": "高雄市",
-      "date": "2026-10-14",
-      "time": "20:00",
-      "capacity": 64,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-319"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-10-14",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-320"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "孩子玩伴-關埔店",
-      "phone": "36667686",
-      "address": "新竹市東區關新路85號",
-      "city": "新竹市",
-      "date": "2026-10-14",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-321"
     }
   ]
 }
