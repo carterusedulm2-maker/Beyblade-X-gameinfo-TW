@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15",
+  "lastUpdated": "2026-10-16",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -4418,34 +4418,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-314"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "Fun學桌遊教室",
-      "phone": "908295765",
-      "address": "高雄市旗山區瑞吉里旗文路7號",
-      "city": "高雄市",
-      "date": "2026-10-15",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-315"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "檔案島",
-      "phone": "07-3136161",
-      "address": "高雄市三民區松江街35號",
-      "city": "高雄市",
-      "date": "2026-10-15",
-      "time": "20:00",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-316"
     }
   ]
 }
