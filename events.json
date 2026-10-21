@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-20",
+  "lastUpdated": "2026-10-21",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -3228,48 +3228,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-229"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "無限魂玩具社",
-      "phone": "04-2482-3381",
-      "address": "台中市大里區東明路175巷27弄5號",
-      "city": "台中市",
-      "date": "2026-10-20",
-      "time": "19:30",
-      "capacity": 48,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-230"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "怪獸電玩",
-      "phone": "0902297207",
-      "address": "新北市永和區中山路一段146號",
-      "city": "新北市",
-      "date": "2026-10-20",
-      "time": "22:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-231"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "屏東夢想街",
-      "phone": "938881189",
-      "address": "屏東市康定街9之23號",
-      "city": "屏東縣",
-      "date": "2026-10-20",
-      "time": "0:00",
-      "capacity": 24,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-232"
     }
   ]
 }
