@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21",
+  "lastUpdated": "2026-10-22",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -2909,20 +2909,6 @@
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "卡庫桌遊店",
-      "phone": "0906-528-208",
-      "address": "高雄市岡山區柳橋西路一段８１號",
-      "city": "高雄市",
-      "date": "2026-10-24",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-207"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
       "storeName": "興義發",
       "phone": "05-2271576",
       "address": "嘉義市中正路433號",
@@ -2933,7 +2919,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-208"
+      "id": "b4-207"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2947,7 +2933,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-209"
+      "id": "b4-208"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2961,7 +2947,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-210"
+      "id": "b4-209"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2975,7 +2961,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-211"
+      "id": "b4-210"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2989,7 +2975,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-212"
+      "id": "b4-211"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3003,7 +2989,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-213"
+      "id": "b4-212"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3017,7 +3003,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-214"
+      "id": "b4-213"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3031,7 +3017,7 @@
       "registrationMethod": "線上(抽選)",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-215"
+      "id": "b4-214"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3045,7 +3031,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-216"
+      "id": "b4-215"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3059,7 +3045,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-217"
+      "id": "b4-216"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3073,7 +3059,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-218"
+      "id": "b4-217"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3087,7 +3073,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-219"
+      "id": "b4-218"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -3101,133 +3087,7 @@
       "registrationMethod": "門市社群",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-220"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "中興精品",
-      "phone": "02-23037609",
-      "address": "台北市中華路二段305巷9號1樓",
-      "city": "台北市",
-      "date": "2026-10-21",
-      "time": "19:30",
-      "capacity": 32,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-221"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具超人",
-      "phone": "02-2223-8888",
-      "address": "新北市永和區永利路132號",
-      "city": "新北市",
-      "date": "2026-10-21",
-      "time": "13:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-222"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具超人",
-      "phone": "02-2223-8888",
-      "address": "新北市永和區永利路132號",
-      "city": "新北市",
-      "date": "2026-10-21",
-      "time": "16:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-223"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "漢謚玩具社",
-      "phone": "915687779",
-      "address": "高雄市苓雅區中華四路244號2樓",
-      "city": "高雄市",
-      "date": "2026-10-21",
-      "time": "19:30",
-      "capacity": 128,
-      "registrationMethod": "FB報名",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-224"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "RiRiCO",
-      "phone": "986948303",
-      "address": "臺中市北屯區東光里北屯路288號B1",
-      "city": "台中市",
-      "date": "2026-10-21",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-225"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-10-21",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-226"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "瑪利玩具",
-      "phone": "03-3806139",
-      "address": "桃園市大溪區員林路二段358號",
-      "city": "桃園市",
-      "date": "2026-10-21",
-      "time": "20:00",
-      "capacity": 48,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-227"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "金寶貝童車玩具城",
-      "phone": "03-543-8569",
-      "address": "新竹市東區三民里民族路137號",
-      "city": "新竹市",
-      "date": "2026-10-21",
-      "time": "13:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-228"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "孩子玩伴-關埔店",
-      "phone": "36667686",
-      "address": "新竹市東區關新路85號",
-      "city": "新竹市",
-      "date": "2026-10-21",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-229"
+      "id": "b4-219"
     }
   ]
 }
