@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-23",
+  "lastUpdated": "2026-10-24",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -3032,20 +3032,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-215"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "TMG",
-      "phone": "0905132941",
-      "address": "桃園市中壢區三光路155號1樓",
-      "city": "桃園市",
-      "date": "2026-10-23",
-      "time": "15:00",
-      "capacity": 32,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-216"
     }
   ]
 }
