@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26",
+  "lastUpdated": "2026-10-27",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -1760,6 +1760,20 @@
       "id": "b4-124"
     },
     {
+      "source": "B4合作據點G3 (2026-9、10月)",
+      "storeName": "玩具E哥桃園三民店",
+      "phone": "03-2727726",
+      "address": "桃園市桃園區三民路三段448-1號1F",
+      "city": "桃園市",
+      "date": "2026-11-08",
+      "time": "12:00",
+      "capacity": 24,
+      "registrationMethod": "線上",
+      "category": "公開 (6歲以上)",
+      "notes": "",
+      "id": "b4-125"
+    },
+    {
       "source": "Funbox門市G3 (2026-9、10月)",
       "storeName": "環球購物中心 桃園a8",
       "phone": "03-327-8279",
@@ -1771,7 +1785,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-125"
+      "id": "funbox-126"
     },
     {
       "source": "Funbox門市G3 (2026-9、10月)",
@@ -1785,7 +1799,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "funbox-126"
+      "id": "funbox-127"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1799,7 +1813,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-127"
+      "id": "b4-128"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1813,7 +1827,7 @@
       "registrationMethod": "皆可",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-128"
+      "id": "b4-129"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1827,7 +1841,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-129"
+      "id": "b4-130"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1841,7 +1855,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-130"
+      "id": "b4-131"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1855,7 +1869,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-131"
+      "id": "b4-132"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1869,7 +1883,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-132"
+      "id": "b4-133"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1883,7 +1897,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-133"
+      "id": "b4-134"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1897,7 +1911,49 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-134"
+      "id": "b4-135"
+    },
+    {
+      "source": "B4合作據點G3 (2026-9、10月)",
+      "storeName": "玩具e哥文山忠順店",
+      "phone": "02-7729-0831",
+      "address": "台北市文山區忠順街二段段22號1樓",
+      "city": "台北市",
+      "date": "2026-10-31",
+      "time": "15:30",
+      "capacity": 8,
+      "registrationMethod": "線上",
+      "category": "通常 (6~12歲)",
+      "notes": "",
+      "id": "b4-136"
+    },
+    {
+      "source": "B4合作據點G3 (2026-9、10月)",
+      "storeName": "玩具e哥新店建國店",
+      "phone": "02-7730-7032",
+      "address": "新北市新店區建國路268號1樓",
+      "city": "新北市",
+      "date": "2026-10-31",
+      "time": "13:00",
+      "capacity": 16,
+      "registrationMethod": "線上",
+      "category": "公開 (6歲以上)",
+      "notes": "",
+      "id": "b4-137"
+    },
+    {
+      "source": "B4合作據點G3 (2026-9、10月)",
+      "storeName": "玩具e哥 桃園北埔店",
+      "phone": "03-273-9917",
+      "address": "桃園市桃園區北埔路36號2樓",
+      "city": "桃園市",
+      "date": "2026-10-31",
+      "time": "18:00",
+      "capacity": 16,
+      "registrationMethod": "門市社群",
+      "category": "通常 (6~12歲)",
+      "notes": "",
+      "id": "b4-138"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1911,7 +1967,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-135"
+      "id": "b4-139"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1925,7 +1981,7 @@
       "registrationMethod": "現場",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-136"
+      "id": "b4-140"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1939,7 +1995,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-137"
+      "id": "b4-141"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1953,7 +2009,7 @@
       "registrationMethod": "FB報名",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-138"
+      "id": "b4-142"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1967,7 +2023,7 @@
       "registrationMethod": "現場",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-139"
+      "id": "b4-143"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1981,7 +2037,7 @@
       "registrationMethod": "門市社群",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-140"
+      "id": "b4-144"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -1995,7 +2051,7 @@
       "registrationMethod": "皆可",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-141"
+      "id": "b4-145"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2009,7 +2065,7 @@
       "registrationMethod": "線上",
       "category": "公開 (6歲以上)",
       "notes": "",
-      "id": "b4-142"
+      "id": "b4-146"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2023,7 +2079,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-143"
+      "id": "b4-147"
     },
     {
       "source": "B4合作據點G3 (2026-9、10月)",
@@ -2037,21 +2093,7 @@
       "registrationMethod": "線上",
       "category": "通常 (6~12歲)",
       "notes": "",
-      "id": "b4-144"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "松梅桌遊舖",
-      "phone": "07-7162227",
-      "address": "高雄市苓雅區自強三路2號3F",
-      "city": "高雄市",
-      "date": "2026-10-26",
-      "time": "20:00",
-      "capacity": 64,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-145"
+      "id": "b4-148"
     }
   ]
 }
