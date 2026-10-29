@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28",
+  "lastUpdated": "2026-10-29",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -1982,90 +1982,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-140"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "艾頑玩具",
-      "phone": "(04)2436-0050",
-      "address": "台中市北屯區太和六街129號",
-      "city": "台中市",
-      "date": "2026-10-28",
-      "time": "19:30",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-141"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "漢謚玩具社",
-      "phone": "915687779",
-      "address": "高雄市苓雅區中華四路244號2樓",
-      "city": "高雄市",
-      "date": "2026-10-28",
-      "time": "19:30",
-      "capacity": 128,
-      "registrationMethod": "FB報名",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-142"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "RiRiCO",
-      "phone": "986948303",
-      "address": "臺中市北屯區東光里北屯路288號B1",
-      "city": "台中市",
-      "date": "2026-10-28",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-143"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "模模多玩具店",
-      "phone": "921699792",
-      "address": "屏東市林森路112號",
-      "city": "屏東縣",
-      "date": "2026-10-28",
-      "time": "15:00",
-      "capacity": 16,
-      "registrationMethod": "門市社群",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-144"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-10-28",
-      "time": "19:30",
-      "capacity": 64,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-145"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "孩子玩伴-關埔店",
-      "phone": "36667686",
-      "address": "新竹市東區關新路85號",
-      "city": "新竹市",
-      "date": "2026-10-28",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-146"
     }
   ]
 }
