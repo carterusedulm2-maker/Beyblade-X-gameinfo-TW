@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08",
+  "lastUpdated": "2026-11-09",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -12,10 +12,6 @@
     {
       "name": "B4合作據點G3 (2026-7、8月)",
       "sheet_id": "1myWxo3cQbsFryJi6Pv8w5nFGXCgBwrhYe8C5iUvVfN0"
-    },
-    {
-      "name": "B4合作據點G3 (2026-9、10月)",
-      "sheet_id": "1MSSZJZKCqDWmPcfIuI4iNLNXU0nyD2VIAU0gr0iBzv8"
     }
   ],
   "events": [
@@ -3434,20 +3430,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-244"
-    },
-    {
-      "source": "B4合作據點G3 (2026-9、10月)",
-      "storeName": "玩具E哥桃園三民店",
-      "phone": "03-2727726",
-      "address": "桃園市桃園區三民路三段448-1號1F",
-      "city": "桃園市",
-      "date": "2026-11-08",
-      "time": "12:00",
-      "capacity": 24,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-245"
     }
   ]
 }
