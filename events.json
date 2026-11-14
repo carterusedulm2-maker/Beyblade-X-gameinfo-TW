@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13",
+  "lastUpdated": "2026-11-14",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -11348,34 +11348,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-809"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "刺客工作室",
-      "phone": "929876131",
-      "address": "高雄市三民區安吉里民族一路80號39樓之一號",
-      "city": "高雄市",
-      "date": "2026-11-13",
-      "time": "19:30",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-810"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "多米文化廣場（阿蓮店",
-      "phone": "972506976",
-      "address": "高雄市阿蓮區中正路483號",
-      "city": "高雄市",
-      "date": "2026-11-13",
-      "time": "20:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-811"
     }
   ]
 }
