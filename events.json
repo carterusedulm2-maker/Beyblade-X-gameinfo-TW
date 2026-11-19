@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18",
+  "lastUpdated": "2026-11-19",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -10228,104 +10228,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-729"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "中興精品",
-      "phone": "23037609",
-      "address": "北市中正區中華路二段305巷9號1樓",
-      "city": "台北市",
-      "date": "2026-11-18",
-      "time": "19:30",
-      "capacity": 24,
-      "registrationMethod": "門市社群",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-730"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "全家樂玩具",
-      "phone": "02-24247987",
-      "address": "基隆市中正區義二路12號",
-      "city": "基隆市",
-      "date": "2026-11-18",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-731"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "孩子玩伴-關埔店",
-      "phone": "(03)6667686",
-      "address": "新竹市東區關新路85號",
-      "city": "新竹市",
-      "date": "2026-11-18",
-      "time": "19:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-732"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "瑪利玩具",
-      "phone": "03-3806139",
-      "address": "桃園市大溪區員林路二段358號",
-      "city": "桃園市",
-      "date": "2026-11-18",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-733"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "玩具貓模型店",
-      "phone": "(07)621-4940",
-      "address": "高雄市岡山區岡山路１９９號",
-      "city": "高雄市",
-      "date": "2026-11-18",
-      "time": "19:30",
-      "capacity": 32,
-      "registrationMethod": "皆可",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-734"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "RIRICO",
-      "phone": "986948303",
-      "address": "臺中市北屯區東光里北屯路288號B1",
-      "city": "台中市",
-      "date": "2026-11-18",
-      "time": "19:30",
-      "capacity": 48,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-735"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "漢謚玩具社",
-      "phone": "915687779",
-      "address": "高雄市苓雅區人和里中華四路244號2 樓",
-      "city": "高雄市",
-      "date": "2026-11-18",
-      "time": "20:00",
-      "capacity": 16,
-      "registrationMethod": "線上",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-736"
     }
   ]
 }
