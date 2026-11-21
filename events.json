@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20",
+  "lastUpdated": "2026-11-21",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -10158,62 +10158,6 @@
       "category": "公開 (6歲以上)",
       "notes": "",
       "id": "b4-724"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "玩具e哥新店中央店",
-      "phone": "02-7730-3050",
-      "address": "新北市新店區中央路159號1樓",
-      "city": "新北市",
-      "date": "2026-11-20",
-      "time": "19:00",
-      "capacity": 24,
-      "registrationMethod": "線上",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-725"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "玩具e哥-雲林虎尾店",
-      "phone": "05-7706615",
-      "address": "雲林縣虎尾鎮立德路6號",
-      "city": "雲林縣",
-      "date": "2026-11-20",
-      "time": "18:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-726"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "玖零玩具",
-      "phone": "06-220-8911",
-      "address": "台南市中西區民權路一段1號",
-      "city": "台南市",
-      "date": "2026-11-20",
-      "time": "20:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-727"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "Bruce桌遊空間-左營店",
-      "phone": "0905 328 785",
-      "address": "高雄市左營區孟子路288號2樓",
-      "city": "高雄市",
-      "date": "2026-11-20",
-      "time": "19:00",
-      "capacity": 64,
-      "registrationMethod": "電話",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-728"
     }
   ]
 }
