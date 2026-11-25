@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24",
+  "lastUpdated": "2026-11-25",
   "sources": [
     {
       "name": "Funbox門市G3 (2026-3、4月)",
@@ -9178,34 +9178,6 @@
       "category": "通常 (6~12歲)",
       "notes": "",
       "id": "b4-654"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "新莊佳瑪TOY WORLD",
-      "phone": "02-7730-9506",
-      "address": "新北市新莊區幸福路763號3樓",
-      "city": "新北市",
-      "date": "2026-11-24",
-      "time": "19:00",
-      "capacity": 16,
-      "registrationMethod": "現場",
-      "category": "通常 (6~12歲)",
-      "notes": "",
-      "id": "b4-655"
-    },
-    {
-      "source": "B4合作據點G3 (2026-11、12月)",
-      "storeName": "怪獸電玩",
-      "phone": "0902297207",
-      "address": "新北市永和區中山路一段146號",
-      "city": "新北市",
-      "date": "2026-11-24",
-      "time": "22:00",
-      "capacity": 32,
-      "registrationMethod": "現場",
-      "category": "公開 (6歲以上)",
-      "notes": "",
-      "id": "b4-656"
     }
   ]
 }
